@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Berkshireswash-Regular';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Berkshireswash-Regular.ttf') format('truetype');
+}
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+.hero-wrap .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .97;
+    background-image: url("/images/homepage/bg/polos_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+}
+
+.overlay2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/bg/polos_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+.overlay3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/bg/polos_03.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+.overlay4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/bg/polos_04.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+.overlay5 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/bg/polos_05.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+.overlay6 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/bg/polos_06.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+.overlay7 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/homepage/polos_07.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 900px;
+}
+
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+.main-event {
+    background-color: rgba(217, 101, 35, 0.58);
+    padding-top: 70px;
+}
+
+.overlay-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-image: url("/images/homepage/polos_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    min-height: 1000px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.overlay-bg2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-image: url("/images/homepage/polos_03.png");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    min-height: 1000px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.overlay-bg3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-image: url("/images/homepage/polos_04.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    min-height: 1000px;
+}
+
+.overlay-bg4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-image: url("/images/homepage/polos_05.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    min-height: 1000px;
+}
+
+.overlay-bg5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-image: url("/images/homepage/polos_06.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    min-height: 1000px;
+}
+
+.sec-maskot{
+    padding-top:50px;
+}
+
+.logo-pef{
+    width:500px;
+    padding-left:30px;
+    padding-top:20px;
+}
+
+.logo-pef:hover {
+    cursor:pointer;
+    width:510px;
+}
+.merchandise-container{
+    min-width:400px;
+}
+
+.container-img {
+    width:100%;
+    height:100%;
+}
+
+.merchandise-image {
+    width:200px;
+    height:200px;
+    margin: auto;
+}
+
+.merchandise-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #efac78;
+}
+
+.merchandise-price {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #efac78;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/bg-video.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 60px 25px 30px 25px;
+    min-height:200px;
+}
+
+.page-title{
+    font-family: Berkshireswash-Regular;
+    font-size: 3rem;
+}
+
+.font-pef {
+    font-family: Berkshireswash-Regular;
+}
+
+.container-page {
+    width: 100%;
+    height: 100%;
+    padding: 120px 20px 10px 20px;
+}
+
+
+.text-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    content: '';
+    background-image: url("/images/bg-text.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px 40px;
+}
+
+a .img-fluid:hover {
+    transform: scale(1.1,1.1);
+}
