@@ -10,7 +10,7 @@
         opacity: .97;
         background-image: url("/images/merchandise/background.jpg");
         background-repeat: repeat-y;
-        background-size: cover;
+        background-size:  100% 100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 
