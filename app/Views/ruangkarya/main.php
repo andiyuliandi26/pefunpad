@@ -27,7 +27,7 @@
 					<div class="row justify-content-center">
 						<?php foreach($kategori as $items):?>
 							<div class="col-md-4 my-4">
-								<a href="#"><img class="img-fluid ruangkarya-link" alt="<?php echo $items->kategori;?>" src="/images/ruangkarya/<?php echo $items->imageurl; ?>"/></a>
+								<a href="/ruangkarya/karyapeserta/<?php echo $items->id; ?>"><img class="img-fluid ruangkarya-link" alt="<?php echo $items->kategori;?>" src="/images/ruangkarya/<?php echo $items->imageurl; ?>"/></a>
 							</div>
 						<?php endforeach; ?>
 					</div>

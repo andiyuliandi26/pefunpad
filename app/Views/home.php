@@ -206,6 +206,7 @@
 		<div class="col-sm-6">
 			<div class="video-container">
 				<div class="iframe-container">
+				<iframe class="responsive-iframe"  src="https://www.youtube.com/embed/BUM8SeH3gCI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<!--<iframe class="responsive-iframe" src="https://www.youtube.com/embed/LpUB2RnHeWg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>-->
 				</div>
 			</div>

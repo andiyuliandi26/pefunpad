@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://devlocal.pefunpad.co.id';
+	public $baseURL = 'http://devlocal.pefunpad.co.id';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ class App extends BaseConfig
 	| variable so that it is blank.
 	|
 	*/
-	public $indexPage = 'index.php?';
+	public $indexPage = '';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -205,7 +205,7 @@ class App extends BaseConfig
 	|
 	*/
 	public $cookiePrefix   = '';
-	public $cookieDomain   = '';
+	public $cookieDomain   = 'devlocal.pefunpad.co.id';
 	public $cookiePath     = '/';
 	public $cookieSecure   = false;
 	public $cookieHTTPOnly = false;
