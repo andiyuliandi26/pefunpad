@@ -15,11 +15,11 @@
 			<?php
 			    foreach($menu as $items){
                     if($items->type == 'image'){
-						echo "<li class='nav-item ml-3'><a class='navbar-brand' href='{$items->path}'><img src='{$items->imagepath}' height='90'/></a></li>";
+                        echo "<li class='nav-item ml-3'><a class='navbar-brand' href='{$items->path}'><img src='{$items->imagepath}' height='90'/></a></li>";						
 					}else{
                         echo "<li class='nav-item'><a href='{$items->path}' class='nav-link'>{$items->title}</a></li>";
 					}
-
+                   
 					//else{
 					//    echo "<li class='nav-item dropdown'>
 					//            <a class='nav-link dropdown-toggle' href='{$items->path}' id='dropdown04' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{$items->title}</a>
@@ -30,6 +30,9 @@
 					//          </li>";
 					//}
 				}
+                 if(logged_in()){
+                        echo "<li class='nav-item'><a href='/logout' class='nav-link'>Logout</a></li>";
+                    }
 			?>
 
           <!--<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>

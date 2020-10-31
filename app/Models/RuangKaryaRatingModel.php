@@ -3,7 +3,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class RuangKaryaMRatingModel extends BaseModel{
+class RuangKaryaRatingModel extends BaseModel{
 	protected $table = 'ruangkarya_rating';
 }
 
