@@ -4,7 +4,7 @@
 
 <?php echo $this->section('content'); ?>
 <h1>
-	Test Titkle
+	Adminisitration Panel
 </h1>
 
 <?php echo $this->endSection('content'); ?>

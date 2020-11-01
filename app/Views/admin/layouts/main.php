@@ -27,7 +27,7 @@
             <li class="nav-item active">
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                     <div class="sidebar-brand-icon">
-                        <img src="<?php echo base_url(); ?>/images/logopef.png" height="50" class="align-top" alt="">
+                        <img src="<?php echo base_url(); ?>/images/homepage/burung.png" height="50" class="align-top" alt="">
                     </div>                
                 </a>
             </li>

@@ -36,7 +36,7 @@
 					<h2 class="h1 text-center page-title text-dark">Virtual Roadshow</h2>
 
 					<div class="card bg-dark">
-						<dvi class="card-body">
+						<div class="card-body">
 							<div class="row">
 								<?php
 								$index = 1;
@@ -77,7 +77,7 @@
 						$index++;
 					endforeach; ?>
 							</div>
-						</dvi>
+						</div>
 					</div>
 				</div>
 			</div>
