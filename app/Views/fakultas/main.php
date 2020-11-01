@@ -26,15 +26,20 @@
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-12 ftco-animate text-center">
+
 					<h2 class="h1 text-center page-title mt-3" style="color:orangered" data-aos="fade-down">Fakultas</h2>
 					<div class="row justify-content-center mt-3">
-						<?php foreach($fakultas as $items): ?>
+						<?php
+						$index = 1;
+						foreach($fakultas as $items): ?>							
 							<div class="col-md-2 my-3" data-aos="zoom-in">
-								<a href="#">
-									<img class="img-fluid" src="/images/fakultas/<?php echo $items->image_url; ?>" alt="<?php echo $items->singkatan; ?>" />
-								</a>
+								
+									<img data-toggle="modal" data-target="#modal<?php echo $index; ?>"  class="img-fluid" src="/images/fakultas/<?php echo $items->image_url; ?>" alt="<?php echo $items->singkatan; ?>" />
+							
 							</div>
-						<?php endforeach; ?>
+						<?php 
+							$index++;	
+							endforeach; ?>
 					</div>
 					
 					<h2 class="h1 text-center page-title mt-5" style="color:orangered" data-aos="fade-down">Markipad</h2>
@@ -50,3 +55,33 @@
 		</div>
 	</div>
 </div>
+
+<?php
+	$index2 = 1;
+	foreach($fakultas as $items): 
+?>
+<div class="modal fade" id="modal<?= $index2; ?>" tabindex="-1" aria-labelledby="myModalLabel<?= $index2; ?>" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel<?= $index2; ?>"><?= $items->nama; ?></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body mb-0 p-0">
+				<div class="row">
+					<div class="col-md-12 mx-3">
+						<?= $items->deskripsi; ?>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<?php 
+	$index2++;	
+	endforeach; 
+?>
