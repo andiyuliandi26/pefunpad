@@ -1,3 +1,7 @@
+<?php 
+	echo $this->extend('/layouts/main');
+    echo $this->section('content');
+?>
 <style>
 	.bg-roadshow {
 		position: absolute;
@@ -26,61 +30,37 @@
 		height:120px;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
-
 </style>
-<div class="hero-wrap js-fullheight">
+
+<!--<div class="hero-wrap js-fullheight">
 	<div class="bg-roadshow">
 		<div class="container-page">
-			<div class="row no-gutters justify-content-center">
-				<div class="col-md-8 ftco-animate text-center">
+			
+		</div>
+	</div>
+</div>-->
+
+<div class="container-bg">
+	<img class="image-bg" src="/images/roadshow/background.jpg" />
+	<img class="image-bg d-none d-sm-block d-md-none" src="/images/roadshow/background.jpg" />
+	<div class="content-page">
+		<div class="row no-gutters justify-content-center mt-md-35 mt-4 main-event">
+				<div class="col-md-8 col-sm-11 ftco-animate text-center">
 					<h2 class="h1 text-center page-title text-dark">Virtual Roadshow</h2>
 
 					<div class="card bg-dark">
 						<div class="card-body">
-							<div class="row">
-								<?php
-								$index = 1;
-								foreach($roadshow as $items): ?>
-									<div class="col-lg-2 col-md-2 mb-4">
-
-										<!--Modal: Name-->
-										<div class="modal fade" id="modal<?php echo $index; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-											<div class="modal-dialog modal-lg" role="document">
-
-												<!--Content-->
-												<div class="modal-content">
-
-													<!--Body-->
-													<div class="modal-body mb-0 p-0">
-
-														<div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-															<!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U"
-														allowfullscreen></iframe>-->
-														</div>
-
-													</div>
-
-												</div>
-												<!--/.Content-->
-
-											</div>
+							<div class="row justify-content-center">
+								<div class="col-md-10 col-sm-11 my-md-3 mb-sm-4 mt-sm-3">
+									<div class="iframe-container">
+											<?= generate_yt_iframe('-Nn07iwCXuw'); ?>
 										</div>
-										<!--Modal: Name-->
-
-										<a style="cursor:pointer">
-											<img class="img-fluid z-depth-1" src="/images/bg-video.png" alt="video"
-												data-toggle="modal" data-target="#modal<?php echo $index; ?>" />
-										</a>
-
-									</div>
-								<?php
-						$index++;
-					endforeach; ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 </div>
+<?php echo $this->endSection('content'); ?>

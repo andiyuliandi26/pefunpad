@@ -1,8 +1,7 @@
 <?php
-use Myth\Auth\Entities\User;
-use Myth\Auth\Models\UserModel;
-namespace App\Controllers;
-
+namespace App\Controllers\Api;
+use CodeIgniter\RESTful\ResourceController;
+use App\Models;
 /**
  * Class BaseController
  *
@@ -15,12 +14,14 @@ namespace App\Controllers;
  *
  * @package CodeIgniter
  */
-use App\Models;
-use CodeIgniter\Controller;
 
-class BaseController extends Controller
+class BaseAPIController extends ResourceController
 {
-	#region Contanta List for dropdown
+	#region Base config API
+	protected $format = 'json';
+	#endregion
+
+	#region Constant List for dropdown
 	public $rk_status = ['Juara 1' => 'Juara 1', 'Juara 2' => 'Juara 2',' Juara 3' => 'Juara 3', 'Peserta' => 'Peserta'];
 	public $rk_jenis = ['Dokumen' => 'Dokumen', 'Video' => 'Video' , 'Audio' => 'Audio'];
 	#endregion
@@ -101,30 +102,5 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
-	}
-
-	protected function load_standard_view($view_path, $standardData = array())
-	{
-		$standardData['menu'] = $this->menu->where('isactive', true)->orderBy('sequence')->findAll();
-		$standardData['sponsorship'] = $this->sponsorship->where('isactive', true)->orderBy('sequence')->findAll();
-		$standardData['mediapartner'] = $this->mediapartner->where('isactive', true)->orderBy('sequence')->findAll();
-		$standardData['socialmedia'] = $this->socialmedia->where('isactive', true)->orderBy('sequence')->findAll();
-
-		//var_dump($standardData['merchandise']);
-		//echo view('layouts/header');
-		//echo view('layouts/nav', $standardData);
-		echo view($view_path, $standardData);
-		//echo view('layouts/footer', $standardData);
-	}
-
-	protected function load_admin_view($view_path, $data = array())
-	{
-
-		echo view('admin/layouts/header');
-		echo view('admin/'. $view_path, $data);
-	}
-
-	public function generate_iframe(){
-		return "test iframe";
 	}
 }

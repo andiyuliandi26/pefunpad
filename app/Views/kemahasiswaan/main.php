@@ -1,4 +1,7 @@
-
+<?php 
+	echo $this->extend('/layouts/main');
+    echo $this->section('content');
+?>
 <style>
 	.bg-kemahasiswaan {
 		position: absolute;
@@ -14,16 +17,24 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 </style>
-<div class="hero-wrap js-fullheight">
-	<div class="bg-kemahasiswaan">
-		<div class="container-page">
-			<div class="row no-gutters justify-content-center">
-				<div class="col-md-8 ftco-animate text-center">
-					<h2 class="h1 text-center page-title">Lembaga Kemahasiswaan</h2>
+<div class="container-bg">
+	<img class="image-bg" src="/images/kemahasiswaan/background.jpg" />
+	<img class="image-bg d-none d-sm-block d-md-none" src="/images/kemahasiswaan/background.jpg" />
+	<div class="content-page">
+		<div class="row no-gutters justify-content-center mt-md-5 mt-4 main-event">
+			<div class="col-md-8 ftco-animate text-center">
+				<h2 class="h1 text-center page-title">Lembaga Kemahasiswaan</h2>
 
 					
-				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<!--<div class="hero-wrap js-fullheight">
+	<div class="bg-kemahasiswaan">
+		<div class="container-page">
+			
+		</div>
+	</div>
+</div>-->
+<?php echo $this->endSection('content'); ?>
