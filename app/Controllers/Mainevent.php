@@ -6,8 +6,7 @@ class Mainevent extends BaseController
 {
 	public function index()
 	{
-		$event = new \App\Models\EventModel();
-		$data['event'] = $event->find(1);
+		$data['event'] = $this->mainevent->find(1);
 
 		$this->load_standard_view('mainevent/main', $data);
 	}

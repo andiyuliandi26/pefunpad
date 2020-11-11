@@ -22,8 +22,8 @@
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <div class="form-label-group">
-                                        <input name="login" type="text" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>" id="input-username" placeholder="Username" required autofocus autocomplete="new-password" autocapitalize="off">
-                                        <label for="input-username">Username</label>
+                                        <input name="login" type="text" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>" id="input-username" placeholder="Username atau e-Mail" required autofocus autocomplete="new-password" autocapitalize="off">
+                                        <label for="input-username">Username atau e-Mail</label>
                                         <div class="invalid-feedback">
 								            <?= session('errors.login') ?>
 							            </div>
@@ -34,8 +34,8 @@
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <div class="form-label-group">
-                                        <input name="password" class="form-control <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" id="input-password" type="password" placeholder="<?=lang('Auth.password')?>" required>
-                                        <label for="input-password">Password</label>
+                                        <input name="password" class="form-control <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" id="input-password" type="password" placeholder="<?=lang('Auth.password')?> / Kode Tiket" required>
+                                        <label for="input-password">Password atau Kode Tiket</label>
                                         <i class="fa fas fa-eye eyepassword" id="eyepassword"></i>
 										<div class="invalid-feedback">
 											<?= session('errors.password') ?>

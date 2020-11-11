@@ -1,3 +1,7 @@
+<?php 
+	echo $this->extend('/layouts/main');
+    echo $this->section('content');
+?>
 
 <style>
 	.bg-tesmiba {
@@ -15,10 +19,10 @@
 	}
 
 </style>
-<div class="hero-wrap js-fullheight">
+<div class="hero-wrap js-fullheight d-none d-lg-block d-sm-none">
 	<div class="bg-tesmiba">
 		<div class="container-page">
-			<div class="row no-gutters justify-content-center">
+			<div class="row no-gutters justify-content-center pt-md-5">
 				<div class="col-md-10 ftco-animate text-center">
 					<h2 class="h1 text-center page-title text-dark mt-3">Tes Miba</h2>
 					<h4 class="text-center font-pef h3 text-dark">Apa Itu Tes Miba?</h4>
@@ -72,3 +76,66 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
+	<img class="image-bg" src="/images/tesmiba/background.jpg" />
+	<img class="image-bg" src="/images/tesmiba/background.jpg" />
+	<div class="content-page">
+		<div class="row no-gutters justify-content-center mt-md-5 mt-4 main-event">
+			<div class="col-md-10 col-sm-10 ftco-animate text-center">
+				<h2 class="h1 text-center page-title text-dark mt-3">Tes Miba</h2>
+				<h4 class="text-center font-pef h3 text-dark">Apa Itu Tes Miba?</h4>
+				<div class="row justify-content-center">
+					<div class="col-md-12 col-sm-12">
+						<div class="text-container">
+							<div class="card-body">									
+								<p class="text-justify">
+									Tes Minat Bakat merupakan sebuah rangkaian tes dan analisis yang menggambarkan kemampuan kognitif, karakterisik minat, serta kepribadian terhadap suatu bidang/jurusan tertentu. PEF tetap hadir dan memberikan fasilitas kepada sista/siswi SMA/SMK sederajat untuk dapat mengetahui karakterisik belajar dan jurusan apa yang sekiranya sesuai untuk mereka di jenjang perkuliahan nanti.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+		<div class="row justify-content-center mt-5 px-sm-2">
+			<div class="col-md-3 col-sm-6 mb-sm-3">
+				<div class="text-container">
+					<div class="card-body">									
+						<p class="lead text-justify">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 mb-sm-3">
+				<div class="text-container">
+					<div class="card-body">									
+						<p class="lead text-justify">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="text-container">
+					<div class="card-body">									
+						<p class="lead text-justify">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="text-container">
+					<div class="card-body">									
+						<p class="lead text-justify">
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php 
+    echo $this->EndSection('content');
+?>

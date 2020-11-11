@@ -1,4 +1,7 @@
-
+<?php 
+	echo $this->extend('/layouts/main');
+    echo $this->section('content');
+?>
 <style>
 	.bg-ruangkarya {
 		position: relative;
@@ -55,3 +58,6 @@
 		</div>
 	</div>
 </div>
+<?php 
+	echo $this->endSection('content');
+?>

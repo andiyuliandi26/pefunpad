@@ -53,6 +53,9 @@ $routes->group('/admin', function($routes)
  * You will have access to the $routes object within that file without
  * needing to reload it.
  */
+
+ //$routes->resource('markipad');
+
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
