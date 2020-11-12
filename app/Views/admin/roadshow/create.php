@@ -15,7 +15,7 @@
                     <?php echo form_input('namavideo', '', ['class'=>'form-control']); ?>
                  </div>
                 <div class="form-group col-md-3">
-                    <label>Singkatan</label>
+                    <label>Video ID (Youtube)</label>
                     <?php echo form_input('videourl', '', ['class'=>'form-control']); ?>
                  </div>
                 <div class="form-group col-md-1">

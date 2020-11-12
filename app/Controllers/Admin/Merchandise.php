@@ -8,8 +8,8 @@ class Merchandise extends AdminBaseController
 
 	public function index()
 	{
-		$data['data'] = $this->merchandise->findAll();
-		$data['merchmarket'] = $this->merchandise_marketplace->findAll();
+		$data['data'] = $this->merchandise->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
+		$data['merchmarket'] = $this->merchandise_marketplace->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
 
 		return view('admin/merchandise/main', $data);
 	}
@@ -25,14 +25,17 @@ class Merchandise extends AdminBaseController
 			    $file->move($this->uploadPath, $imageName.'png');
 			}
 
-			$this->merchandise->save([
+			if(!$this->merchandise->save([
 				'imageurl' => $imageName,
 			    'namaproduk' => $this->request->getPost('namaproduk'),
 			    'deskripsi' => $this->request->getPost('deskripsi'),
 			    'harga' => $this->request->getPost('harga'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->merchandise->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
 			return redirect()->to('/admin/merchandise');
@@ -47,12 +50,15 @@ class Merchandise extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->merchandise->update($id,[
+			if(!$this->merchandise->update($id,[
 			    'namavideo' => $this->request->getPost('namavideo'),
 			    'videourl' => $this->request->getPost('videourl'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->merchandise->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Perubahan data berhasil');
 			return redirect()->to('/admin/merchandise');
@@ -77,14 +83,17 @@ class Merchandise extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->merchandise_marketplace->save([
+			if($this->merchandise_marketplace->save([
 			    'merchandiseid' => $id,
 			    'namamarketplace' => $this->request->getPost('namamarket'),
 			    'infomarketplace' => $this->request->getPost('infomarketplace'),
 			    'hyperlink' => $this->request->getPost('hyperlink'),
 			    'sequence'  => $this->request->getPost('sequencemarket'),
 			    'isactive'  => 1,
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->merchandise_marketplace->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
 			return redirect()->to('/admin/merchandise/marketplace/'.$id);
@@ -97,13 +106,16 @@ class Merchandise extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->merchandise_marketplace->update($id,[
+			if(!$this->merchandise_marketplace->update($id,[
 			    'namamarketplace' => $this->request->getPost('namamarket'),
 			    'hyperlink' => $this->request->getPost('hyperlink'),
 			    'infomarketplace' => $this->request->getPost('infomarketplace'),
 			    'sequence'  => $this->request->getPost('sequence'),
 			    'isactive'  => $this->request->getPost('isactive'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->merchandise_marketplace->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
 			return redirect()->to('/admin/merchandise/marketplace/'.$this->request->getPost('merchandiseid'));

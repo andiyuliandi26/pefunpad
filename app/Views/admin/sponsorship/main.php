@@ -4,7 +4,7 @@
 ?>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Master Data Fakultas</h1>
+    <h1 class="h3 mb-0 text-gray-800">Master Data Sponsorship</h1>
     
 </div>
 
@@ -16,14 +16,13 @@
                 <tr class="text-center">
                     <th width="5%"></th>
                     <th width="10%">Nama</th>
-                    <th width="5%">Singkatan</th>
                     <th width="15%">Image</th>
-                    <th width="55%">Deskripsi</th>
+                    <th width="20%">Hyperlink</th>
                     <th width="10%">Active</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($fakultas as $items): ?>
+                <?php foreach($sponsorship as $items): ?>
                     
                     <tr>
                         <td class="text-center align-middle">
@@ -33,12 +32,16 @@
                             </a> 
                         </td>
                         <td class="align-middle"><?php echo $items->nama; ?></td>
-                        <td class="align-middle"><?php echo $items->singkatan; ?></td>
                         <td>
-                            <img class="img-fluid" src="<?php echo base_url(); ?>/images/fakultas/<?php echo $items->imageurl; ?>" />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    
+                            <img class="img-fluid" src="<?php echo base_url(); ?>/images/sponsorship/<?php echo $items->imageurl; ?>" />
+                                </div>
+                            </div>
                             
                         </td>
-                        <td><?php echo $items->deskripsi; ?></td>
+                        <td><?php echo $items->hyperlink; ?></td>
                         <td class="align-middle text-center">
                             <div class="custom-control custom-checkbox">                   
                                 <?php echo form_checkbox('isactive', 1, $items->isactive, ['class'=>'custom-control-input', 'id' => 'customSwitch', 'disabled' => 'disabled']); ?>

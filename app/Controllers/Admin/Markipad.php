@@ -2,32 +2,35 @@
 use App\Models;
 namespace App\Controllers\Admin;
 
-class Roadshow extends AdminBaseController
+class Markipad extends AdminBaseController
 {
 	public function index()
 	{
-		$data['data'] = $this->virtual_roadshow->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
+		$data['data'] = $this->virtual_markipad->findAll();
 
-		return view('admin/roadshow/main', $data);
+		return view('admin/markipad/main', $data);
 	}
 
 	public function create()
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->virtual_roadshow->save([
+			if(!$this->virtual_markipad->save([
 			    'namavideo' => $this->request->getPost('namavideo'),
 			    'videourl' => $this->request->getPost('videourl'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->virtual_markipad->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
-			return redirect()->to('/admin/roadshow');
+			return redirect()->to('/admin/markipad');
         }
         else
         {
-			return view('admin/roadshow/create');
+			return view('admin/markipad/create');
         }
 	}
 
@@ -35,21 +38,24 @@ class Roadshow extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->virtual_roadshow->update($id,[
+			if(!$this->virtual_markipad->update($id,[
 			    'namavideo' => $this->request->getPost('namavideo'),
 			    'videourl' => $this->request->getPost('videourl'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->virtual_markipad->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Perubahan data berhasil');
-			return redirect()->to('/admin/roadshow');
+			return redirect()->to('/admin/markipad');
         }
         else
         {
-			$data['data'] = $this->virtual_roadshow->find($id);
+			$data['data'] = $this->virtual_markipad->find($id);
 
-			return view('admin/roadshow/update', $data);
+			return view('admin/markipad/update', $data);
         }		
 	}
 }

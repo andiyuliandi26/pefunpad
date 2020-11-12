@@ -9,7 +9,7 @@ class Ruangkarya extends AdminBaseController
 	#region Kategori
 	public function kategori()
 	{
-		$data['data'] = $this->ruangkarya_kategori->findAll();
+		$data['data'] = $this->ruangkarya_kategori->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
 
 		return view('admin/ruangkarya/kategori', $data);
 	}

@@ -34,7 +34,7 @@
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <div class="form-label-group">
-                                        <input name="password" class="form-control <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" id="input-password" type="password" placeholder="<?=lang('Auth.password')?> / Kode Tiket" required>
+                                        <input name="password" class="form-control <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" id="input-password" type="password" placeholder="<?=lang('Auth.password')?> atau Kode Tiket" required>
                                         <label for="input-password">Password atau Kode Tiket</label>
                                         <i class="fa fas fa-eye eyepassword" id="eyepassword"></i>
 										<div class="invalid-feedback">

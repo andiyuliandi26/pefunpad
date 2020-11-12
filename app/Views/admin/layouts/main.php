@@ -25,7 +25,7 @@
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion shadow toggled" id="accordionSidebar">
             
             <li class="nav-item active">
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
                     <div class="sidebar-brand-icon">
                         <img src="<?php echo base_url(); ?>/images/homepage/burung.png" height="50" class="align-top" alt="">
                     </div>                
@@ -79,6 +79,8 @@
         </div>
       <script>
           $(document).ready(function () {
+              
+	            $('[data-toggle="tooltip"]').tooltip();
 
           });
       </script>

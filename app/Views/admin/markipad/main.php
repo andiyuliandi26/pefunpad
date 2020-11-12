@@ -4,7 +4,7 @@
 ?>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Master Data Fakultas</h1>
+    <h1 class="h3 mb-0 text-gray-800">Master Data Markipad</h1>
     
 </div>
 
@@ -15,15 +15,14 @@
             <thead>
                 <tr class="text-center">
                     <th width="5%"></th>
-                    <th width="10%">Nama</th>
-                    <th width="5%">Singkatan</th>
-                    <th width="15%">Image</th>
-                    <th width="55%">Deskripsi</th>
-                    <th width="10%">Active</th>
+                    <th width="5%">Sequence</th>
+                    <th width="30%">Nama</th>
+                    <th width="50%">Video ID (Youtube)</th>
+                    <th width="10%">is Active</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($fakultas as $items): ?>
+                <?php foreach($data as $items): ?>
                     
                     <tr>
                         <td class="text-center align-middle">
@@ -32,13 +31,9 @@
                                 Edit
                             </a> 
                         </td>
-                        <td class="align-middle"><?php echo $items->nama; ?></td>
-                        <td class="align-middle"><?php echo $items->singkatan; ?></td>
-                        <td>
-                            <img class="img-fluid" src="<?php echo base_url(); ?>/images/fakultas/<?php echo $items->imageurl; ?>" />
-                            
-                        </td>
-                        <td><?php echo $items->deskripsi; ?></td>
+                        <td class="align-middle text-center"><?php echo $items->sequence; ?></td>
+                        <td class="align-middle"><?php echo $items->namavideo; ?></td>
+                        <td class="align-middle"><?php echo $items->videourl; ?></td>
                         <td class="align-middle text-center">
                             <div class="custom-control custom-checkbox">                   
                                 <?php echo form_checkbox('isactive', 1, $items->isactive, ['class'=>'custom-control-input', 'id' => 'customSwitch', 'disabled' => 'disabled']); ?>

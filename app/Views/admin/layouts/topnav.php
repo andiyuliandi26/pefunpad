@@ -18,14 +18,14 @@
         </a>
         <!-- Dropdown - User Information -->
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="/User/UserProfile">
+            <!--<a class="dropdown-item" href="/User/UserProfile">
                 <i class="far fa-id-badge fa-sm fa-fw mr-2 text-gray-400"></i>
                 Profil
             </a>
             <a class="dropdown-item" href="@LenIDSBaseUrl/Manage/ChangePassword" target="_blank">
                 <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                 Ganti Password
-            </a>
+            </a>-->
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/logout">
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
