@@ -31,6 +31,31 @@
 		opacity:0.5;
 		transition:.5s ease;
 	}*/
+	.image-overlay {
+	  transition: .5s ease;
+	  opacity: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  text-align: center;
+	}
+
+	.image-link:hover .img-fluid {
+	  opacity: 0.3;
+	}
+
+	.image-link:hover .image-overlay {
+	  opacity: 1;
+	}
+
+	.image-text-overlay {
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 16px;
+	  padding: 16px 32px;
+	}
 </style>
 <div class="hero-wrap d-none d-lg-block d-sm-none">
 	<div class="bg-fakultas">
@@ -50,6 +75,9 @@
 							</div>-->
 							<a class="col-md-2 col-sm-2 my-3 px-sm-2 image-link" href="/fakultas/detail/<?= $items->id; ?>">
 								<img class="img-fluid" src="/images/fakultas/<?php echo $items->imageurl; ?>" alt="<?php echo $items->singkatan; ?>" />
+								  <div class="image-overlay">
+									<div class="image-text-overlay"><?= $items->singkatan ?></div>
+								  </div>
 							</a>
 						<?php 
 							$index++;	

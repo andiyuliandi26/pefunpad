@@ -6,7 +6,7 @@ class Fakultas extends BaseController
 {
 	public function index()
 	{
-		$data['fakultas'] = $this->fakultas->findAll();
+		$data['fakultas'] = $this->fakultas->where('isactive', true)->orderby('sequence')->findAll();
 		$data['markipad'] = $this->virtual_markipad->where('isactive', true)->orderby('sequence')->findAll();
 
 		$this->load_standard_view('fakultas/main', $data);

@@ -17,7 +17,7 @@
                     <th width="5%"></th>
                     <th width="5%">Sequence</th>
                     <th width="30%">Nama</th>
-                    <th width="50%">Video Url</th>
+                    <th width="50%">Video ID (Youtube)</th>
                     <th width="10%">is Active</th>
                 </tr>
             </thead>

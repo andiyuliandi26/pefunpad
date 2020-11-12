@@ -2,15 +2,15 @@
 use App\Models;
 namespace App\Controllers\Admin;
 
-class Fakultas extends AdminBaseController
+class Sponsorship extends AdminBaseController
 {
-	private $uploadPath = ROOTPATH .'public/images/fakultas';
+	private $uploadPath = ROOTPATH .'public/images/sponsorship';
 
 	public function index()
 	{
-		$data['fakultas'] = $this->fakultas->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
+		$data['sponsorship'] = $this->sponsorship->orderBy('isactive', 'DESC')->orderBy('sequence')->findAll();
 
-		return view('admin/fakultas/main', $data);
+		return view('admin/sponsorship/main', $data);
 	}
 
 	public function create()
@@ -26,25 +26,26 @@ class Fakultas extends AdminBaseController
 			    $imageName = $file->getName();
 			}
 
-			if(!$this->fakultas->save([
+			if(!$this->sponsorship->save([
 			    'imageurl' => $imageName,
 			    'nama' => $this->request->getPost('nama'),
-			    'deskripsi' => $this->request->getPost('deskripsi'),
-			    'singkatan'  => $this->request->getPost('singkatan'),
+			    'type' => $this->request->getPost('type'),
+			    'hyperlink'  => $this->request->getPost('hyperlink'),
+			    'width'  => '150',
+			    'height'  => '60',
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
 			])){		
-				session()->setFlashdata('danger', 'Perubahan data gagal.'. $this->fakultas->errors());
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->sponsorship->errors());
 				return redirect()->back();
-				
 			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
-			return redirect()->to('/admin/fakultas');
+			return redirect()->to('/admin/sponsorship');
         }
         else
         {
-			return view('admin/fakultas/create');
+			return view('admin/sponsorship/create');
         }
 	}
 
@@ -52,40 +53,41 @@ class Fakultas extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$fakultas = $this->fakultas->find($id);
+			$sponsorship = $this->sponsorship->find($id);
 			
-			$imageName = $fakultas->image_url;
+			$imageName = $sponsorship->imageurl;
 			$file = $this->request->getFile('imageupload');
-			//var_dump($file->getSize());
+
 			if($file->getSize() > 0){
 			    $file->move($this->uploadPath);
 
-				unlink($this->uploadPath.'/'.$fakultas->image_url);
+				unlink($this->uploadPath.'/'.$sponsorship->image_url);
 				
 			    $imageName = $file->getName();
 			}
 
-			if(!$this->fakultas->update($id,[
+			if(!$this->sponsorship->update($id,[
 			    'imageurl' => $imageName,
 			    'nama' => $this->request->getPost('nama'),
-			    'deskripsi' => $this->request->getPost('deskripsi'),
-			    'singkatan'  => $this->request->getPost('singkatan'),
+			    'type' => $this->request->getPost('type'),
+			    'hyperlink'  => $this->request->getPost('hyperlink'),
+			    'width'  => '150',
+			    'height'  => '60',
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
 			])){		
-				session()->setFlashdata('danger', 'Perubahan data gagal.'. $this->fakultas->errors());
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->sponsorship->errors());
 				return redirect()->back();
-				
 			}
 
 			session()->setFlashdata('success', 'Perubahan data berhasil');
-			return redirect()->to('/admin/fakultas');
+			return redirect()->to('/admin/sponsorship');
         }
         else
         {
-			$data['fakultas'] = $this->fakultas->find($id);
+			$data['sponsorship'] = $this->sponsorship->find($id);
 
-			return view('admin/fakultas/update', $data);
+			return view('admin/sponsorship/update', $data);
         }		
 	}
 }

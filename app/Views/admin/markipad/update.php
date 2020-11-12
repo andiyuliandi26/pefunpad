@@ -4,7 +4,7 @@
 ?>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Master Data Roadshow - Update</h1>
+    <h1 class="h3 mb-0 text-gray-800">Master Data Markipad - Update</h1>
 </div>
 <?php echo form_open_multipart(current_url(),['method' => 'post']); ?>
     <div class="card shadow h-100 ">

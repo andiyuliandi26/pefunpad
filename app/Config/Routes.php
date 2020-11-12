@@ -31,13 +31,16 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('', 'Home::index');
-$routes->group('/admin', function($routes)
-{
-    $routes->add('/', 'Admin\Home::index');
-    $routes->add('fakultas', 'Admin\Fakultas::index');
-});
-//$routes->group('', ['filter' => 'login'], function($routes){
-//    $routes->get('home', 'Home::home');
+//$routes->group('/admin', function($routes)
+//{
+//    $routes->add('/', 'Admin\Home::index');
+//    $routes->add('fakultas', 'Admin\Fakultas::index');
+//});
+$routes->get('/webinar', 'Webinar::index', ['filter' => 'role:member']);
+$routes->get('/admin', 'Admin\Home::index', ['filter' => 'role:administrator']);
+//$routes->get('/admin/(:segment)', 'AdminBaseController::index', ['filter' => 'role:administrator']);
+//$routes->group('admin', ['filter' => 'role:administrator'], function($routes){
+//    $routes->add('/admin', 'AdminBaseController::index');
 //}); 
 
 /**

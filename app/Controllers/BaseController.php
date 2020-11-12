@@ -1,6 +1,7 @@
 <?php
 use Myth\Auth\Entities\User;
 use Myth\Auth\Models\UserModel;
+use Myth\Auth\Authorization\GroupModel;
 namespace App\Controllers;
 
 /**
@@ -49,6 +50,7 @@ class BaseController extends Controller
 	protected $webinar_peserta;
 	protected $users;
 	protected $userEntity;
+	protected $auth_groups;
 	#endregion
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -96,6 +98,8 @@ class BaseController extends Controller
 		$this->users = model(UserModel::class);
 		//$this->userEntity = model(User::class);
 		$this->userEntity = model(User::class);
+		$this->auth_groups = new \Myth\Auth\Authorization\GroupModel();
+;
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------

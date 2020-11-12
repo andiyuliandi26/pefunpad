@@ -11,7 +11,7 @@
                         $colWidthsm = 4;
                         //echo "<div class='container-img col-md-3' style='width:\"{$items->width}px\"; height:\"{$items->height}px\";'>";
                         echo "<div class='col-md-{$items->type} col-sm-{$colWidthsm}'>";
-						echo "<a href='{$items->hyperlink}' target='_blank' class='mx-2'><img src='{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
+						echo "<a href='{$items->hyperlink}' target='_blank' class='mx-2'><img src='/images/sponsorship/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                         echo "</div>";
 					}
                 ?>
@@ -28,7 +28,7 @@
 			            {
                             $colWidthsm = 4;
 						    echo "<div class='col-md-{$items->type} col-sm-{$colWidthsm}'>";
-				            echo "<a href='{$items->hyperlink}' target='_blank' class='mx-3'><img src='{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
+				            echo "<a href='{$items->hyperlink}' target='_blank' class='mx-3'><img src='/images/mediapartner/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                             echo "</div>";
 			            }
                     ?>

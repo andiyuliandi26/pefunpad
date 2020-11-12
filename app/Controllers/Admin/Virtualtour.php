@@ -6,7 +6,7 @@ class Virtualtour extends AdminBaseController
 {
 	public function index()
 	{
-		$data['data'] = $this->virtual_tour->findAll();
+		$data['data'] = $this->virtual_tour->orderBy('isactive', 'ASC')->orderBy('sequence')->findAll();
 
 		return view('admin/virtualtour/main', $data);
 	}
@@ -15,12 +15,15 @@ class Virtualtour extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->virtual_tour->save([
+			if(!$this->virtual_tour->save([
 			    'namavideo' => $this->request->getPost('namavideo'),
 			    'videourl' => $this->request->getPost('videourl'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->virtual_tour->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
 			return redirect()->to('/admin/virtualtour');
@@ -35,12 +38,15 @@ class Virtualtour extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->virtual_tour->update($id,[
+			if(!$this->virtual_tour->update($id,[
 			    'namavideo' => $this->request->getPost('namavideo'),
 			    'videourl' => $this->request->getPost('videourl'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
+				session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->virtual_tour->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Perubahan data berhasil');
 			return redirect()->to('/admin/virtualtour');

@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class FakultasModel extends BaseModel{
 	protected $table = 'fakultas';
-	protected $allowedFields = ['nama', 'singkatan', 'image_url', 'deskripsi', 'sequence', 'isactive'];
+	protected $allowedFields = ['nama', 'singkatan', 'imageurl', 'deskripsi', 'sequence', 'isactive'];
 }
 
 ?>
