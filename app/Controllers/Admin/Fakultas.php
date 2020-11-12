@@ -73,7 +73,7 @@ class Fakultas extends AdminBaseController
 				session()->setFlashdata('success', 'Perubahan data berhasil');
 				return redirect()->to('/admin/fakultas');
 			}else{
-				session()->setFlashdata('success', 'Perubahan data gagal.'. $this->fakultas->errors());
+				session()->setFlashdata('danger', 'Perubahan data gagal.'. $this->fakultas->errors());
 				return redirect()->back();
 			}
         }

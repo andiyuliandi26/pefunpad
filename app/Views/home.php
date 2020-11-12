@@ -195,16 +195,17 @@
 
 <div class="container-bg">
 	<img class="image-bg" src="/images/homepage/bg/polos_01.png" />
-	<div class="content-page mt-lg-5 mt-sm-5 mt-md-4">
+	<div class="content-page mt-xs-3 mt-lg-5 mt-sm-3 mt-md-4">
 		<div class="row no-gutters justify-content-center main-event pt-sm-3" data-aos="fade-down">
-			<div class="col-md-8 col-xs-4 text-center">
+			<div class="col-md-8 col-sm-6 text-center">
 				<h3 class="text-dark page-title"> 21 - 22 November 2020 </h3>
 				<div id="countdown" class="countdownHolder"></div>
 			</div>
-			<div class="col-md-7 col-sm-9 px-5">
-				<div class="container-bg">
-					<img class="image-bg" src="/images/homepage/mainevent.png" />
-				</div>
+			<div class="col-md-7 col-sm-9 col-xs-6 px-5">
+				<img class="img-fluid" src="/images/homepage/mainevent.png" />
+				<!--<div class="container-bg">
+					
+				</div>-->
 				<!--<div class="video-container video-container-sm">							
 					
 				</div>-->
@@ -213,14 +214,14 @@
 	</div>
 </div>
 
-<div class="container-bg d-none d-sm-block d-md-none">
+<div class="container-bg d-block d-sm-none">
 	<img class="image-bg" src="/images/homepage/bg/polos_02.png" />
 	<div class="content-page">
-		<div class="row no-gutters mt-md-5 pt-md-5 mt-md-3 pt-md-2 mt-sm-2">
+		<div class="row no-gutters mt-md-3">
 			<!--<div class="col-sm-6 col-xs-4 px-5">						
 					<img class="img-fluid" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn"/>
 			</div>-->
-			<div class="col-md-2 col-sm-3 px-sm-2 mr-sm-0 text-center">
+			<div class="col-md-2 col-sm-3 col-xs-3 px-sm-2 mr-sm-0 text-center">
 				<div class="row no-gutters justify-content-center">
 					<div class="col-sm-8">						
 						<img class="img-fluid" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />
@@ -234,7 +235,7 @@
 			</div>
 			<div class="col-md-9 col-sm-9">
 				<div class="row no-gutters">
-					<div class="col-md-2 col-sm-2 pr-sm-0">
+					<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0">
 						<img src="/images/homepage/burung.png" class="img-fluid" />
 					</div>
 					<div class="col-md-9 col-sm-10 text-left">
@@ -245,7 +246,7 @@
 					</div>
 				</div>
 				<div class="row no-gutters">
-					<div class="col-md-2 col-sm-2 pr-sm-0">
+					<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0">
 						<img src="/images/homepage/kujang.png" class="img-fluid" />
 					</div>
 					<div class="col-md-9 col-sm-10 text-left">
@@ -290,7 +291,7 @@
 <div class="container-bg d-none d-md-block ">
 	<img class="image-bg" src="/images/homepage/bg/polos_02.png" />
 	<div class="content-page">
-		<div  class="row no-gutters mt-5 justify-content-center text-center">
+		<div  class="row no-gutters mt-2 justify-content-center text-center">
 				<div class="col-md-4 pt-3">
 					<div class="row mb-2 logodetail">
 						<div class="col-md-3">
@@ -345,11 +346,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="row no-gutters mt-5 pt-4 justify-content-center text-center" data-aos="fade-in">
+			<div class="row no-gutters mt-2 pt-2 justify-content-center text-center" data-aos="fade-in">
 				<div class="col-sm-8">
 					<!--<img class="img-fluid" src="/images/pef-ohu.png" />-->
-					<h1 class="font-pef text-danger mb-1 display-3">PEF x OHU 2020</h1>
-					<h1 class="font-pef text-danger">Wings of Collaboration</h1>
+					<h1 class="font-pef text-danger mb-1 display-4">PEF x OHU 2020</h1>
+					<h3 class="font-pef text-danger">Wings of Collaboration</h3>
 				</div>
 			</div>
 	</div>
