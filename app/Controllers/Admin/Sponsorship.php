@@ -61,7 +61,7 @@ class Sponsorship extends AdminBaseController
 			if($file->getSize() > 0){
 			    $file->move($this->uploadPath);
 
-				unlink($this->uploadPath.'/'.$sponsorship->image_url);
+				unlink($this->uploadPath.'/'.$sponsorship->imageurl);
 				
 			    $imageName = $file->getName();
 			}

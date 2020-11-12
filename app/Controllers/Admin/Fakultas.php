@@ -54,13 +54,13 @@ class Fakultas extends AdminBaseController
         {
 			$fakultas = $this->fakultas->find($id);
 			
-			$imageName = $fakultas->image_url;
+			$imageName = $fakultas->imageurl;
 			$file = $this->request->getFile('imageupload');
 			//var_dump($file->getSize());
 			if($file->getSize() > 0){
 			    $file->move($this->uploadPath);
 
-				unlink($this->uploadPath.'/'.$fakultas->image_url);
+				unlink($this->uploadPath.'/'.$fakultas->imageurl);
 				
 			    $imageName = $file->getName();
 			}

@@ -61,7 +61,7 @@ class Mediapartner extends AdminBaseController
 			if($file->getSize() > 0){
 			    $file->move($this->uploadPath);
 
-				unlink($this->uploadPath.'/'.$mediapartner->image_url);
+				unlink($this->uploadPath.'/'.$mediapartner->imageurl);
 				
 			    $imageName = $file->getName();
 			}
