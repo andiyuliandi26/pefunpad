@@ -36,7 +36,8 @@ $routes->get('', 'Home::index');
 //    $routes->add('/', 'Admin\Home::index');
 //    $routes->add('fakultas', 'Admin\Fakultas::index');
 //});
-$routes->get('/webinar', 'Webinar::index', ['filter' => 'role:member']);
+$routes->get('/webinar', 'Webinar::index', ['filter' => 'role:member,administrator, panitia']);
+$routes->get('/virtualtour', 'Virtualtour::index', ['filter' => 'role:member,administrator,panitia']);
 $routes->get('/admin', 'Admin\Home::index', ['filter' => 'role:administrator']);
 //$routes->get('/admin/(:segment)', 'AdminBaseController::index', ['filter' => 'role:administrator']);
 //$routes->group('admin', ['filter' => 'role:administrator'], function($routes){
