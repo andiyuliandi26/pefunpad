@@ -27,7 +27,7 @@ class Fakultas extends AdminBaseController
 			}
 
 			$this->fakultas->save([
-			    'image_url' => $imageName,
+			    'imageurl' => $imageName,
 			    'nama' => $this->request->getPost('nama'),
 			    'deskripsi' => $this->request->getPost('deskripsi'),
 			    'singkatan'  => $this->request->getPost('singkatan'),
@@ -61,17 +61,21 @@ class Fakultas extends AdminBaseController
 			    $imageName = $file->getName();
 			}
 
-			$this->fakultas->update($id,[
-			    'image_url' => $imageName,
+			if($this->fakultas->update($id,[
+			    'imageurl' => $imageName,
 			    'nama' => $this->request->getPost('nama'),
 			    'deskripsi' => $this->request->getPost('deskripsi'),
 			    'singkatan'  => $this->request->getPost('singkatan'),
 			    'isactive'  => $this->request->getPost('isactive'),
 			    'sequence'  => $this->request->getPost('sequence'),
-			]);
+			])){		
 
-			session()->setFlashdata('success', 'Perubahan data berhasil');
-			return redirect()->to('/admin/fakultas');
+				session()->setFlashdata('success', 'Perubahan data berhasil');
+				return redirect()->to('/admin/fakultas');
+			}else{
+				session()->setFlashdata('success', 'Perubahan data gagal.'. $this->fakultas->errors());
+				return redirect()->back();
+			}
         }
         else
         {
