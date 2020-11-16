@@ -7,6 +7,7 @@
     
     <!--<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">-->
 
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/sb-admin-2/sb-admin-2.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/bootstrap/bootstrap.css">
 	  <link href="<?php echo base_url(); ?>/css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/css/fontawesome/css/brands.min.css" rel="stylesheet">
@@ -37,7 +38,7 @@
       <script src="<?php echo base_url(); ?>/js/jquery-3.2.1.min.js"></script>
       <!--<script src="js/jquery-migrate-3.0.1.min.js"></script>-->
   </head>
-  <body>
+  <body id="page-top">
       <style>
 	  	.bg-awan {
 			  /*width:100%;*/
@@ -246,7 +247,9 @@
 				font-weight:300;
 			}
 		}
-      </style>
+
+/*		.scroll-to-top{ position:fixed;right:1rem;bottom:1rem;display:none;width:2.75rem;height:2.75rem;text-align:center;color:#fff;background:rgba(90,92,105,.5);line-height:46px}.scroll-to-top:focus,.scroll-to-top:hover{color:#fff}.scroll-to-top:hover{background:#5a5c69}.scroll-to-top i{font-weight:800}@-webkit-keyframes growIn{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}@keyframes growIn{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+*/      </style>
 
 	  <div class="wrapper">
 		  <div id="navigation">
@@ -264,6 +267,7 @@
 
 
 	  <script src="<?php echo base_url(); ?>/js/popper.min.js"></script>
+      <script src="<?php echo base_url(); ?>/js/sb-admin-2.min.js"></script>
       <script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
       <script src="<?php echo base_url(); ?>/js/jquery.easing.1.3.js"></script>
       <script src="<?php echo base_url(); ?>/js/jquery.waypoints.min.js"></script>
