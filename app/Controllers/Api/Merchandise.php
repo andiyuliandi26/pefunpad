@@ -13,7 +13,7 @@ class Merchandise extends BaseAPIController
     }
 
     public function getmarketplace($merchandiseID){
-        return $this->respond($this->merchandise_marketplace->where('merchandiseid',  $merchandiseID)->findAll(), 200);   
+        return $this->respond($this->merchandise_marketplace->where('merchandiseid',  $merchandiseID)->orderBy('sequence')->findAll(), 200);   
     }
     
 }

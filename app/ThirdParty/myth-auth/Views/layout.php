@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url(); ?>/favicon.ico">
 
-    <title>Pef x OHU Admin</title>
+    <title>PEF x OHU</title>
     
     <link href="<?php echo base_url(); ?>/css/sb-admin-2/sb-admin-2.css" rel="stylesheet" />
 

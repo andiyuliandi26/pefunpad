@@ -22,7 +22,7 @@ use CodeIgniter\Controller;
 class BaseController extends Controller
 {
 	#region Contanta List for dropdown
-	public $rk_status = ['Juara 1' => 'Juara 1', 'Juara 2' => 'Juara 2',' Juara 3' => 'Juara 3', 'Peserta' => 'Peserta'];
+	public $rk_status = ['Juara 1' => 'Juara 1', 'Juara 2' => 'Juara 2','Juara 3' => 'Juara 3','Juara Favorit' => 'Juara Favorit', 'Peserta' => 'Peserta'];
 	public $rk_jenis = ['Dokumen' => 'Dokumen', 'Video' => 'Video' , 'Audio' => 'Audio'];
 	#endregion
 	

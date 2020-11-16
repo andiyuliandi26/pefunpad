@@ -8,6 +8,10 @@
     <!--<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">-->
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/bootstrap/bootstrap.css">
+	  <link href="<?php echo base_url(); ?>/css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/css/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/css/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/css/fontawesome/css/regular.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/animate.css">
     
@@ -67,7 +71,7 @@
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			padding-top: 56.25%;
-			border-radius: 20px;
+			border-radius: 15px;
 			margin-top:10px;
 		}
 
@@ -151,7 +155,7 @@
 		}
 
 		.footer-title {
-			font-size:30px;
+			font-size:25px;
 			font-weight:300;
 		}
 
@@ -163,7 +167,20 @@
 			background-image: url("/images/bg-video.png");
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
-			padding: 2.3em 1.7em .7em 2em;
+			padding: 3em 30px 30px;
+		}
+
+	  	@media screen and (min-width: 1400px) {
+	  		.video-container {
+				width: 100%;
+				height: auto;
+				position: relative;
+				content: '';
+				background-image: url("/images/bg-video.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding: 4em 30px 30px;
+			}
 		}
 
 		@media screen and (max-width: 786px) {
@@ -186,11 +203,9 @@
 				font-size:1.8em;
 			}
 			.rangkaian-acara {
-			font-size:1em;
+				font-size:1em;
+			}
 		}
-		}
-
-
 
 		@media only screen and (max-width:600px) {
 			.video-container-sm {

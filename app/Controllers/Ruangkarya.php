@@ -12,7 +12,21 @@ class Ruangkarya extends BaseController
 	}
 
 	public function karyapeserta($id){
-		$data['karyapeserta'] = $this->ruangkarya_peserta->join('ruangkarya_kategori','ruangkarya_kategori.id = ruangkarya_peserta.kategoriid', 'left')->where('kategoriid', $id)->findAll();
+		$getKarya = $this->ruangkarya_peserta->select('ruangkarya_peserta.*, ruangkarya_kategori.kategori')->join('ruangkarya_kategori','ruangkarya_kategori.id = ruangkarya_peserta.kategoriid', 'left')->where('kategoriid', $id)->orderBy('statuspeserta', 'ASC')->findAll();
+		$komentarList = array();
+		
+		foreach($getKarya as $items){
+			$getKomentar = $this->ruangkarya_comment->where('karyapesertaid', $items->id)->findAll();
+			
+			if(count($getKomentar) > 0){
+				array_push($komentarList,$getKomentar);
+			}else{
+				array_push($komentarList,array());
+			}
+		}
+
+		$data['karyapeserta'] = $getKarya;
+		$data['komentarkarya'] = $komentarList;
 		$this->load_standard_view('ruangkarya/karyapeserta', $data);
 	}
 }

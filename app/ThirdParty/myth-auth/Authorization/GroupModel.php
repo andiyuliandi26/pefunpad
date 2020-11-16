@@ -218,4 +218,19 @@ class GroupModel extends Model
             ->where('permission_id', $permissionId)
             ->delete();
     }
-}
+
+    public function groupList(){
+		$returnValue = array();
+		$kategoriList = $this->findAll();
+
+		foreach($kategoriList as $items){
+            $returnValue += [$items->name => $items->description];
+        }
+
+		return $returnValue;
+	}
+
+    public function getGroupsByName($name){
+        return $this->where('name', $name)->first();
+    }
+}   

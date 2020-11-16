@@ -16,9 +16,10 @@
                 <tr class="text-center">
                     <th width="5%"></th>
                     <th width="10%">Kategori</th>
+                    <th width="10%">Asal Sekolah</th>
+                    <th width="10%">Nama Tim</th>
                     <th width="10%">Nama Peserta</th>
-                    <th width="20%">Deskripsi</th>
-                    <th width="20%">Judul</th>
+                    <th width="5%">Judul</th>
                     <th width="5%">Jenis Karya</th>
                     <th width="5%">Status Karya</th>
                     <th width="20%">Url Karya</th>
@@ -36,8 +37,9 @@
                             </a>   
                         </td>
                         <td class="align-middle"><?php echo $items->kategori; ?></td>
+                        <td class="align-middle"><?php echo $items->asalsekolah; ?></td>
+                        <td class="align-middle"><?php echo $items->namatim; ?></td>
                         <td class="align-middle"><?php echo $items->namapeserta; ?></td>
-                        <td class="align-middle"><?php echo $items->deskripsipeserta; ?></td>
                         <td class="align-middle"><?php echo $items->judulkarya; ?></td>
                         <td class="align-middle"><?php echo $items->jeniskarya; ?></td>
                         <td class="align-middle"><?php echo $items->statuspeserta; ?></td>

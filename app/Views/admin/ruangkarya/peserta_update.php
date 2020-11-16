@@ -15,14 +15,18 @@
                     <?php echo form_dropdown("kategoriid", $kategorilist, $data->kategoriid, ['class' => 'custom-select']); ?>
                  </div>  
                 <div class="form-group col-md-10">
-                    <label>Nama Peserta</label>
-                    <?php echo form_input('namapeserta',  $data->namapeserta, ['class'=>'form-control']); ?>
+                    <label>Asal Sekolah</label>
+                    <?php echo form_input('asalsekolah',  $data->asalsekolah, ['class'=>'form-control']); ?>
                  </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-10">
+                    <label>Nama Tim</label>
+                    <?php echo form_input('namatim',  $data->namatim, ['class'=>'form-control']); ?>
+                 </div>
+                <div class="form-group col-md-9">
                     <label>Deskripsi Peserta</label>
-                    <?php echo form_textarea('deskripsipeserta',  $data->deskripsipeserta, ['class'=>'form-control', 'row' => '10']); ?>
+                    <?php echo form_textarea('namapeserta',  $data->namapeserta, ['class'=>'form-control summernote', 'row' => '10']); ?>
                  </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-9">
                     <label>Judul Karya</label>
                     <?php echo form_textarea('judulkarya',  $data->judulkarya, ['class'=>'form-control', 'row' => '10']); ?>
                  </div>
@@ -35,8 +39,13 @@
                     <?php echo form_dropdown("statuspeserta", $statuspesertalist,  $data->statuspeserta, ['class' => 'custom-select']); ?>
                  </div>
                 <div class="form-group col-md-10">
-                    <label>Url Karya</label>
-                    <?php echo form_input('urlkarya',  $data->urlkarya, ['class'=>'form-control']); ?>
+                    <label>Poster</label>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img class="img-fluid" src="/images/ruangkarya/<?php echo $data->imageurl; ?>" />
+                        </div>
+                    </div>
+                    <?php echo form_upload('imageupload', '', ['class' => 'form-control-file', 'id' => 'imageupload']); ?>
                  </div>
                 <div class="form-group col-md-12">
                     <div class="custom-control custom-switch">                   
@@ -52,5 +61,10 @@
         </div>
     </div>
 <?php echo form_close(); ?>
-
+<script>
+      $('.summernote').summernote({
+        tabsize: 2,
+        height: 300
+      });
+</script>
 <?php echo $this->endSection('content'); ?>

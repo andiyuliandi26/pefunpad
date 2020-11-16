@@ -6,8 +6,7 @@ class Virtualtour extends BaseController
 {
 	public function index()
 	{
-		$event = new \App\Models\EventModel();
-		$data['event'] = $event->find(1);
+		$data['data'] =  $this->virtual_tour->where('isactive', true)->orderby('sequence')->findAll();
 
 		$this->load_standard_view('virtualtour/main', $data);
 	}

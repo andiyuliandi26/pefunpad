@@ -10,7 +10,7 @@
         <span class="oi oi-menu"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-center" id="ftco-nav">
+      <div class="collapse navbar-collapse justify-content-center font-pef" id="ftco-nav">
         <ul class="navbar-nav">
 			<?php
 				//foreach($menu as $items){
@@ -35,22 +35,22 @@
 				//    }
 			?>
             
-          <li class="nav-item"><a href="/roadshow" class="nav-link">Roadshow</a></li>
+          <li class="nav-item"><a href="/roadshow" class="nav-link">Roadshow</a></li>            
+          <li class="nav-item"><a href="/virtualtour" class="nav-link">Virtual Tour</a></li>     
           <li class="nav-item"><a href="/ruangkarya" class="nav-link">Ruang Karya</a></li>
           <li class="nav-item"><a href="/tesmiba" class="nav-link">Tes Miba</a></li>
-          <li class="nav-item"><a href="/openmic" class="nav-link">Spektrum Alumni</a></li>
           <li class="nav-item bg-awan"><a href="/webinar" class="nav-link text-danger font-weight-bold px-md-3">Webinar</a></li>
             
           <li class="nav-item ml-3"><a class="navbar-brand" href="/"><img src="<?= base_url(); ?>/images/logopef.png" height="50"/></a></li>
-            
-          <li class="nav-item bg-awan"><a href="/virtualtour" class="nav-link text-danger font-weight-bold">Virtual Tour</a></li>
+                   
+          <li class="nav-item bg-awan"><a href="/mainevent" class="nav-link text-danger font-weight-bold">Main Event</a></li>
           <li class="nav-item"><a href="/fakultas" class="nav-link">Fakultas</a></li>
           <li class="nav-item"><a href="/kemahasiswaan" class="nav-link">Kemahasiswaan</a></li>
-          <li class="nav-item"><a href="/merchandise" class="nav-link">Merchandise</a></li>
-          <li class="nav-item"><a href="/mainevent" class="nav-link">Main Event</a></li>
+          <li class="nav-item"><a href="/merchandise" class="nav-link">Merchandise</a></li>            
+          <li class="nav-item"><a href="/openmic" class="nav-link">Spektrum Alumni</a></li>
             <?php
             if(logged_in()){
-                echo "<li class='nav-item'><a href='/logout' class='nav-link'>Logout</a></li>";
+               // echo "<li class='nav-item'><a href='/logout' class='nav-link'>Logout</a></li>";
             }
             ?>
         </ul>
