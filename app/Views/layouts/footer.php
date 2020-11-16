@@ -1,3 +1,7 @@
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
 <footer class="ftco-footer ftco-bg-dark ftco-section py-sm-3">
     <div class="container">
     <div class="row mb-3 justify-content-center text-center ">
