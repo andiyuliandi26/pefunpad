@@ -44,23 +44,18 @@
 	<img class="image-bg" src="/images/roadshow/background.jpg" />
 	<img class="image-bg d-none d-sm-block d-md-none" src="/images/roadshow/background.jpg" />
 	<div class="content-page">
-		<div class="row no-gutters justify-content-center mt-md-35 mt-4 main-event">
-				<div class="col-md-8 col-sm-11 ftco-animate text-center">
-					<h2 class="h1 text-center page-title text-dark">Virtual Roadshow</h2>
-
-					<div class="card bg-dark">
-						<div class="card-body">
-							<div class="row justify-content-center">
-								<div class="col-md-10 col-sm-11 my-md-3 mb-sm-4 mt-sm-3">
-									<div class="iframe-container">
-											<?= generate_yt_iframe('-Nn07iwCXuw'); ?>
-										</div>
-								</div>
-							</div>
-						</div>
+		<div class="row no-gutters justify-content-center mt-md-1 mt-4 main-event">
+			<div class="col-md-8 col-sm-11 ftco-animate text-center">
+				<h2 class="text-center page-title text-dark h3">Virtual Roadshow</h2>				
+			</div>
+			<div class="col-md-7 col-xl-6 col-sm-11 ftco-animate text-center">
+				<div class="video-container">
+					<div class="iframe-container">
+						<?= generate_yt_iframe('-Nn07iwCXuw'); ?>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 </div>
 <?php echo $this->endSection('content'); ?>

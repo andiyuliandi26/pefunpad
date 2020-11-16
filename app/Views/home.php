@@ -224,7 +224,8 @@
 			<div class="col-md-2 col-sm-3 col-xs-3 px-sm-2 mr-sm-0 text-center">
 				<div class="row no-gutters justify-content-center">
 					<div class="col-sm-8">						
-						<img class="img-fluid" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />
+						<!--<img class="img-fluid" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />-->
+						<img class="img-fluid" src="/animasi/logopef.gif" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />
 					</div>
 					<div class="col-sm-8">
 						<p class="logo-title" data-aos="fade-in">in collaboration with</p></div>
@@ -365,11 +366,29 @@
 			</div>
 		</div>
 		<div class="row no-gutters justify-content-center ">
-			<div class="col-md-3 col-sm-3 text-center mx-5" data-aos="fade-right">
-					<img class="img-fluid" src="/images/maskot-siro.png" />
+			<div class="col-md-3 col-sm-3 text-center mx-2" data-aos="fade-right">
+				<!--<img class="img-fluid" src="/images/maskot-siro.png" />-->
+				<img class="img-fluid" src="/animasi/siro-v2.gif" />				
+				<h4 class="font-pef">Siro</h4>
 			</div>
-			<div class="col-md-3 col-sm-3 text-center mx-5" data-aos="fade-left">
-				<img class="img-fluid" src="/images/maskot-vivi.png" />
+			<div class="col-md-3 col-sm-3 text-center mx-2" data-aos="fade-left">
+				<!--<img class="img-fluid" src="/images/maskot-vivi.png" />-->
+				<img class="img-fluid" src="/animasi/vivi-v2.gif" />
+				<h4 class="font-pef">Vivi</h4>
+			</div>
+			<div class="col-md-4 text-left" data-aos="zoom-in">
+				<div class="text-justify">
+					<h4 class="font-pef">Awan</h4>
+					<p>Representasi para individu dibalik PEF X OHU 2020 yang siap untuk menemani peserta menelusuri langit Padjadjaran tempat mereka bernaung</p>
+				</div>
+				<div class="text-justify">
+					<h4 class="font-pef">Siro dan Vivi</h4>
+					<p><strong>Siro</strong> diambil dari nama salah satu jenis awan tinggi yaitu "Cirrocumulus" dan <strong>Vivi</strong> diambil dari kata "vivid" yang berarti cerah</p>
+				</div>
+				<div class="text-justify">
+					<h4 class="font-pef">Rompi</h4>
+					<p>Dikenakan Siro dan Vivi dihiasi motif bunga khas Jawa Barat</p>
+				</div>
 			</div>
 		</div>
 
@@ -460,23 +479,31 @@
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-dialog-centered">
 		<div class="modal-content">
-			<div class="modal-header">
+			<!--<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
-			<div class="modal-body text-center pb-5">
-				<img src="/images/homepage/welcome_message.jpg" />
-			</div>
+			</div>-->
+			<!--<div class="modal-body text-center pb-5">-->
+				
+				<!--<img src="/images/homepage/welcome_message.jpg" />-->
+				
+			<!--</div>-->
+			<div class="embed-responsive embed-responsive-16by9">
+					<video width="320" height="240" autoplay loop class="embed-responsive-item" >
+					  <source src="/videos/welcome_screen.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video> 
+				</div>
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
 	$(document).ready(function () {
-		//$('#welcomeModal').modal('show');
+		$('#welcomeModal').modal('show');
 		//var datetime = (new Date().getTime() / 1000) + (86400 * 2) + 1;
-		var datetime = (Date.parse('<?php echo $event->tanggalevent; ?>'));
+		var datetime = (Date.parse('<?php echo $event->tanggaleventstart; ?>'));
 		//var flipdown = new FlipDown(datetime);
 		//flipdown.start();
 

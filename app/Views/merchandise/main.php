@@ -13,7 +13,7 @@
         opacity: .97;
         background-image: url("/images/merchandise/background.jpg");
         background-repeat: repeat-y;
-        background-size:  100% 100%;
+        background-size:  100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 
@@ -26,7 +26,7 @@
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center main-event mt-md-2">
 				<div class="col-lg-8 col-md-12 col-sm-12 ftco-animate text-center">
-					<h2 class="h1 text-center page-title text-danger mt-3">Merchandise</h2>
+					<h2 class="h1 text-center page-title text-danger mt-2">Merchandise</h2>
 					<div class="row justify-content-center">
 						<?php foreach($merchandise as $items): ?>
 							<div class="col-lg-3 col-md-3 col-sm-4">
@@ -40,7 +40,9 @@
 					<div class="row justify-content-center mt-5">
 						<div class="col-md-8">
 							<div class="video-container">
-
+								<div class="iframe-container">
+									<?= generate_yt_iframe('-Nn07iwCXuw'); ?>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -83,7 +85,7 @@
 				if (!data.error) {
 					if (data.length > 0) {
 						for (var i = 0; i < data.length; i++) {
-							appendText += '<div class="col-md-2 col-sm-2 my-3 mx-3"><a href="' + data[i].hyperlink + '" target="_blank"><img class="img-fluid" src="/images/marketplace/'+ data[i].marketicon +'" alt="' + data[i].namamarketplace + '"/></a></div>';
+							appendText += '<div class="col-md-2 col-sm-2 my-3 mr-3"><a href="' + data[i].hyperlink + '" target="_blank"><img class="img-fluid" src="/images/marketplace/'+ data[i].marketicon +'" alt="' + data[i].namamarketplace + '"/></a></div>';
 						}
 						
 					}

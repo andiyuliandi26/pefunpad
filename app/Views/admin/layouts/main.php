@@ -12,8 +12,10 @@
     <link href="<?php echo base_url(); ?>/css/fontawesome/css/solid.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/css/fontawesome/css/regular.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/css/summernote/summernote-bs4.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/js/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url(); ?>/js/bootstrap-datepicker.js"></script>
     <script src="<?php echo base_url(); ?>/js/jquery-easing/jquery.easing.min.js"></script>
     <script src="<?php echo base_url(); ?>/js/sb-admin-2.min.js"></script>   
     <script src="<?php echo base_url(); ?>/js/summernote/summernote-bs4.min.js"></script>   

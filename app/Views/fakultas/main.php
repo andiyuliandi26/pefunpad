@@ -11,9 +11,9 @@
         bottom: 0;
         content: '';
         opacity: .97;
-        background-image: url("/images/fakultas/background.jpg");
+        background-image: url("/images/fakultas/background-long.png");
         background-repeat: repeat-y;
-        background-size:  100% 100%;
+        background-size:  100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 
@@ -43,7 +43,7 @@
 	}
 
 	.image-link:hover .img-fluid {
-	  opacity: 0.3;
+	  opacity: 0.5;
 	}
 
 	.image-link:hover .image-overlay {
@@ -98,12 +98,14 @@
 										foreach($markipad as $items): 
 											
 										?>
-											<div class="col-md-2 my-3">
-												<div class="iframe-container">
+											<div class="col-md-3 my-3">
+												<div class="iframe-container rounded-0">
 													<?= generate_yt_iframe($items->videourl); ?>
 													<!--<div id="player<?= $index; ?>"></div>-->
 													<!--<iframe class="responsive-iframe" src="<?= $items->videourl; ?>?controls=2" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+													
 												</div>
+												<p class="lead text-white mb-0"><?= $items->namavideo;?></p>
 											</div>
 										<?php 
 											$index++;

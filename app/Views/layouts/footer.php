@@ -8,9 +8,9 @@
                 <?php
                     foreach($sponsorship as $items)
 					{
-                        $colWidthsm = 4;
-                        //echo "<div class='container-img col-md-3' style='width:\"{$items->width}px\"; height:\"{$items->height}px\";'>";
-                        echo "<div class='col-md-{$items->type} col-sm-{$colWidthsm}'>";
+                        $colWidthmd = 3;
+                            $colWidthsm = 4;
+						    echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
 						echo "<a href='{$items->hyperlink}' target='_blank' class='mx-2'><img src='/images/sponsorship/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                         echo "</div>";
 					}
@@ -26,8 +26,9 @@
                     <?php
 			            foreach($mediapartner as $items)
 			            {
+                            $colWidthmd = 3;
                             $colWidthsm = 4;
-						    echo "<div class='col-md-{$items->type} col-sm-{$colWidthsm}'>";
+						    echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
 				            echo "<a href='{$items->hyperlink}' target='_blank' class='mx-3'><img src='/images/mediapartner/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                             echo "</div>";
 			            }
@@ -40,9 +41,9 @@
     <div class="row">
         <div class="col-md-12 mb-4 text-center">
             <h5 class="text-white font-pef mb-2">Contact Us</h5>
-            <div class="row justify-content-center" data-aos="zoom-in">
+            <div class="row justify-content-center" data-aos="fade-zoom-in">
                 <?php foreach($socialmedia as $items): ?>
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-md-4 col-lg-2 col-sm-4">
                         <div class="row mb-2 justify-content-center no-gutters">
 						    <div class="col-md-2 col-sm-2 pr-0">
 							    <img src="/images/sosmed/<?= $items->imageurl ?>" class="img-fluid" />

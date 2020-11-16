@@ -82,6 +82,24 @@
 </li>
 
 <li class="nav-item active dropright no-arrow">
+    <a class="nav-link dropdown-toggle" href="#" id="mainevent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fas fa-calendar-alt"></i>
+        <span>Main Event</span>
+    </a>
+    <div class="dropdown-menu shadow animated--fade-in" aria-labelledby="mainevent">
+        <a class="dropdown-item" href="/admin/mainevent">
+            <i class="fas fa-fw fa-cogs mr-2 text-gray-400"></i>
+            Setup
+        </a>
+        <a class="dropdown-item" href="/admin/mainevent/bukutamu">
+            <i class="fas fa-fw fa-users mr-2 text-gray-400"></i>
+            Buku Tamu
+        </a>
+    </div>
+</li>
+
+
+<li class="nav-item active dropright no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="administrator" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fa fas fa-tools"></i>
         <span>Administrator</span>

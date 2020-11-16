@@ -91,15 +91,30 @@ class Ruangkarya extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->ruangkarya_peserta->save([
-			    'kategoriid' => $this->request->getPost('kategoriid'),			    
-			    'namapeserta' => $this->request->getPost('namapeserta'),			    
-			    'deskripsipeserta' => $this->request->getPost('deskripsipeserta'),			    
-			    'judulkarya' => $this->request->getPost('judulkarya'),			    
-			    'jeniskarya' => $this->request->getPost('jeniskarya'),			    
-			    'statuspeserta' => $this->request->getPost('statuspeserta'),			    
-			    'isactive'  => $this->request->getPost('isactive'),
-			]);
+			$imageName = "";
+			$file = $this->request->getFile('imageupload');
+			//var_dump($file->getSize());
+			if($file->getSize() > 0){
+			    $file->move($this->uploadPath);
+				
+			    $imageName = $file->getName();
+			}
+
+			if(!$this->ruangkarya_peserta->save([
+					'kategoriid' => $this->request->getPost('kategoriid'),			    
+					'namatim' => $this->request->getPost('namatim'),			    
+					'namapeserta' => $this->request->getPost('namapeserta'),			    
+					'asalsekolah' => $this->request->getPost('asalsekolah'),			    
+					'judulkarya' => $this->request->getPost('judulkarya'),			    
+					'jeniskarya' => $this->request->getPost('jeniskarya'),			    
+					'statuspeserta' => $this->request->getPost('statuspeserta'),			    
+					'videourl' => $this->request->getPost('videourl'),			    
+					'imageurl' => $imageName,			    
+					'isactive'  => $this->request->getPost('isactive'),
+				])){
+				session()->setFlashdata('danger', 'Penambahan data gagal. '. $this->ruangkarya_peserta->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Penambahan data berhasil');
 			return redirect()->to('/admin/ruangkarya/peserta');
@@ -118,16 +133,34 @@ class Ruangkarya extends AdminBaseController
 	{
 		if ($this->request->getMethod() === 'post')
         {
-			$this->ruangkarya_peserta->update($id,[
+			$data = $this->ruangkarya_peserta->find($id);
+			
+			$imageName = $data->imageurl;
+			$file = $this->request->getFile('imageupload');
+			//var_dump($file->getSize());
+			if($file->getSize() > 0){
+			    $file->move($this->uploadPath);
+
+				unlink($this->uploadPath.'/'.$data->imageurl);
+				
+			    $imageName = $file->getName();
+			}
+
+			if(!$this->ruangkarya_peserta->update($id,[
 			    'kategoriid' => $this->request->getPost('kategoriid'),			    
-			    'namapeserta' => $this->request->getPost('namapeserta'),			    
-			    'deskripsipeserta' => $this->request->getPost('deskripsipeserta'),			    
-			    'judulkarya' => $this->request->getPost('judulkarya'),			    
-			    'jeniskarya' => $this->request->getPost('jeniskarya'),			    
-			    'urlkarya' => $this->request->getPost('urlkarya'),			    
-			    'statuspeserta' => $this->request->getPost('statuspeserta'),			    
-			    'isactive'  => $this->request->getPost('isactive'),
-			]);
+					'namatim' => $this->request->getPost('namatim'),			    
+					'namapeserta' => $this->request->getPost('namapeserta'),			    
+					'asalsekolah' => $this->request->getPost('asalsekolah'),			    
+					'judulkarya' => $this->request->getPost('judulkarya'),			    
+					'jeniskarya' => $this->request->getPost('jeniskarya'),			    
+					'statuspeserta' => $this->request->getPost('statuspeserta'),			    
+					'videourl' => $this->request->getPost('videourl'),			    
+					'imageurl' => $imageName,			    
+					'isactive'  => $this->request->getPost('isactive'),
+			])){
+				session()->setFlashdata('danger', 'Penambahan data gagal. '. $this->ruangkarya_peserta->errors());
+				return redirect()->back();
+			}
 
 			session()->setFlashdata('success', 'Perubahan data berhasil');
 			return redirect()->to('/admin/ruangkarya/peserta');
