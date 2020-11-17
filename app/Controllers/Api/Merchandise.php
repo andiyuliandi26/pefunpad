@@ -9,11 +9,11 @@ class Merchandise extends BaseAPIController
  
     public function index()
     {
-        return $this->respond($this->merchandise->findAll(), 200);
+        return $this->respond($this->merchandise->where('isactive',true)->orderBy('sequence')->findAll(), 200);
     }
 
     public function getmarketplace($merchandiseID){
-        return $this->respond($this->merchandise_marketplace->where('merchandiseid',  $merchandiseID)->orderBy('sequence')->findAll(), 200);   
+        return $this->respond($this->merchandise_marketplace->where('merchandiseid',  $merchandiseID)->where('isactive',true)->orderBy('sequence')->findAll(), 200);   
     }
     
 }

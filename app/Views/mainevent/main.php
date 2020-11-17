@@ -32,7 +32,7 @@
 	}
 </style>
 <div class="container-bg">
-	<img class="image-bg" src="/images/kemahasiswaan/background.jpg" />
+	<img class="image-bg" src="/images/mainevent/background.png" />
 	<img class="image-bg d-none d-sm-block d-md-none" src="/images/kemahasiswaan/background.jpg" />
 	<div class="content-page">
         <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 main-event">

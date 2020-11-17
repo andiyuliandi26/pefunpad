@@ -17,7 +17,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 </style>
-<div class="hero-wrap d-none d-lg-block d-sm-none">
+<div class="hero-wrap">
 	<div class="bg-virtualtour">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center pt-md-5">
@@ -29,11 +29,11 @@
 							foreach($data as $items): 
 											
 							?>
-								<div class="col-md-3 my-3">
+								<div class="col-md-4 my-3">
 									<div class="iframe-container rounded-0">
 										<?= generate_yt_iframe($items->videourl); ?>
 									</div>
-									<p class="lead text-white mb-0"><?= $items->namavideo;?></p>
+									<p class="h4 font-pef text-white mb-0 bg-dark py-2"><?= $items->namavideo;?></p>
 								</div>
 							<?php 
 								$index++;
@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
+<!--<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
 	<img class="image-bg" src="/images/virtualtour/background.jpg" />
 	<img class="image-bg" src="/images/virtualtour/background.jpg" />
 	<div class="content-page">
@@ -64,5 +64,5 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
 <?php echo $this->endSection('content'); ?>

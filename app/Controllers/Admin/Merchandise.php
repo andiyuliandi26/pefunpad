@@ -74,7 +74,7 @@ class Merchandise extends AdminBaseController
 	public function marketplace($id)
 	{
 		$data['data'] = $this->merchandise->find($id);
-		$data['merchmarket'] = $this->merchandise_marketplace->where('merchandiseid', $id)->findAll();
+		$data['merchmarket'] = $this->merchandise_marketplace->where('merchandiseid', $id)->where('isactive',true)->findAll();
 
 		return view('admin/merchandise/marketplace', $data);
 	}

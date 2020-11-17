@@ -4,16 +4,16 @@
 ?>
 <style>
 	.bg-ruangkarya {
-		position: absolute;
+		position: relative;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         content: '';
         opacity: .97;
-        background-image: url("/images/ruangkarya/background.jpg");
+        background-image: url("/images/ruangkarya/background.png");
         background-repeat: repeat-y;
-        background-size: cover;
+        background-size: 100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 
@@ -21,7 +21,7 @@
 		transform:scale(1.1,1.1);
 	}
 </style>
-<div class="hero-wrap js-fullheight d-none d-lg-block d-sm-none">
+<div class="hero-wrap d-none d-lg-block d-sm-none">
 	<div class="bg-ruangkarya">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center pt-md-5">
