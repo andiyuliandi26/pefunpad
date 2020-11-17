@@ -48,20 +48,19 @@
             <div class="row justify-content-center" data-aos="fade-zoom-in">
                 <?php foreach($socialmedia as $items): ?>
                     <div class="col-md-4 col-lg-2 col-sm-4">
-                        <div class="row mb-2 justify-content-center no-gutters">
-						    <div class="col-md-2 col-sm-2 pr-0">
-							    <img src="/images/sosmed/<?= $items->imageurl ?>" class="img-fluid" />
-						    </div>
-						    <div class="col-md-9 col-sm-5 pl-1">
-							    <a href="<?= $items->hyperlink ?>" target="_blank"><?= $items->nama ?></a>
-						    </div>
-					    </div>
+                        <a href="<?= $items->hyperlink ?>" target="_blank" class="card-link stretched-link">
+                            <div class="row mb-2 justify-content-center no-gutters">
+						        <div class="col-md-2 col-sm-2 pr-0">
+							        <img src="/images/sosmed/<?= $items->imageurl ?>" class="img-fluid" />
+						        </div>
+						        <div class="col-md-9 col-sm-5 pl-3 text-left">
+							        <?= $items->nama ?>
+						        </div>
+					        </div>
+                        </a>
                     </div>
                 <?php endforeach; ?>
             </div>
-        <!--<p class="text-white mb-0">Instagram: @pef_unpad</p>
-        <p class="text-white mb-0">Twitter: @pef_unpad</p>
-        <p class="text-white mb-0">OA Line: @pef_unpad</p>-->
         </div>
         <div class="col-md-12 text-center">
             <p style="font-size:.7em">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="/" target="_blank">PEF x OHU UNPAD</a></p>
@@ -69,8 +68,4 @@
         </div>
     </div>
 </footer>  
-
-      
-    
-  </body>
-</html>
+>

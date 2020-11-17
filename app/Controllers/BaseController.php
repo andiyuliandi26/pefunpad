@@ -51,6 +51,7 @@ class BaseController extends Controller
 	protected $users;
 	protected $userEntity;
 	protected $auth_groups;
+	protected $peserta_event;
 	#endregion
 	/**
 	 * An array of helpers to be loaded automatically upon

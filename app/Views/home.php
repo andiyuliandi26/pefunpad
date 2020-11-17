@@ -370,6 +370,7 @@
 				<!--<img class="img-fluid" src="/images/maskot-siro.png" />-->
 				<img class="img-fluid" src="/animasi/siro-v2.gif" />				
 				<h4 class="font-pef">Siro</h4>
+
 			</div>
 			<div class="col-md-3 col-sm-3 text-center mx-2" data-aos="fade-left">
 				<!--<img class="img-fluid" src="/images/maskot-vivi.png" />-->
@@ -412,6 +413,7 @@
 						<div class="text-container py-sm-1 py-md-4 text-center" data-aos="zoom-in">
 							<p class="font-pef text-danger rangkaian-acara my-xl-3">
 								<?php echo $items->namaacara; ?>
+								<a class="stretched-link" href="<?= base_url().$items->hyperlink;?>"></a>
 							</p>
 						</div>
 					</div>
@@ -490,11 +492,11 @@
 				
 			<!--</div>-->
 			<div class="embed-responsive embed-responsive-16by9">
-					<video width="320" height="240" autoplay loop class="embed-responsive-item" >
-					  <source src="/videos/welcome_screen.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video> 
-				</div>
+				<video width="320" height="240" autoplay loop class="embed-responsive-item" >
+					<source src="/videos/welcome_screen.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video> 
+			</div>
 		</div>
 	</div>
 </div>

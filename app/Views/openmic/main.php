@@ -23,7 +23,7 @@
 	<div class="content-page">
 		<div class="row no-gutters justify-content-center main-event mt-md-3 mt-sm-5">
 			<div class="col-md-10 col-sm-12 ftco-animate text-center">
-				<h2 class="h1 text-center page-title mt-3 text-dark">Open Mic with Alumni Unpad</h2>
+				<h2 class="h1 text-center page-title mt-3 text-dark">Spektrum Alumni Unpad</h2>
 				<div class="row justify-content-center mt-5">
 					<div class="col-md-5">
 						<!--<div class="video-container">
