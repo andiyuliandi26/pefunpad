@@ -55,7 +55,7 @@
 
 <div class="form-signin">
     <div class="text-center mb-4">
-        <img class="icon" src="<?= base_url() ?>/images/logopef.png" height="175">
+        <a href="<?= base_url(); ?>"><img class="icon" src="<?= base_url() ?>/images/logopef.png" height="175"></a>
     </div>
 
     <?= view('Myth\Auth\Views\_message_block') ?>
@@ -74,7 +74,7 @@
 	                                        <img class="image-bg" src="/images/bg-login-form.png" />
 	                                        <div class="content-page">
 		                                        <div class="form-label-group">
-                                                    <input name="login" type="text" class="form-control bg-transparent border-0" id="input-username" placeholder="Username atau e-Mail" required autofocus autocomplete="new-password" autocapitalize="off">
+                                                    <input name="login" type="text" class="form-control bg-transparent border-0 mt-3 pl-5" id="input-username" placeholder="Username atau e-Mail" required autofocus autocomplete="new-password" autocapitalize="off">
                                                     <label for="input-username" class="text-white h4">Username atau e-Mail</label>
                                                     <div class="invalid-feedback">
 								                        <?= session('errors.login') ?>
@@ -92,7 +92,7 @@
 	                                        <img class="image-bg" src="/images/bg-login-form.png" />
 	                                        <div class="content-page">
 		                                        <div class="form-label-group">
-                                                    <input name="password" class="form-control bg-transparent border-0" id="input-password" type="password" placeholder="<?=lang('Auth.password')?> atau Kode Tiket" required>
+                                                    <input name="password" class="form-control bg-transparent border-0 mt-3 pl-5" id="input-password" type="password" placeholder="<?=lang('Auth.password')?> atau Kode Tiket" required>
                                                     <label for="input-password" class="text-white h4">Password atau Kode Tiket</label>
                                                     <i class="fa fas fa-eye eyepassword text-white" id="eyepassword"></i>
 										            <div class="invalid-feedback">

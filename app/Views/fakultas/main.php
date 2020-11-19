@@ -85,6 +85,7 @@
 					</div>
 					
 					<h2 class="h1 text-center page-title mt-5 text-danger">Markipad</h2>
+				<h4 class="h4 text-center font-pef mt-1 text-danger">Mari Kita Kenalan dengan Unpad</h4>
 					<div class="row justify-content-center">
 						<div class="col-md-12">
 							<!--<div id="player1"></div>
@@ -147,6 +148,7 @@
 				</div>
 					
 				<h2 class="h1 text-center page-title mt-5 text-danger">Markipad</h2>
+				<h4 class="h4 text-center font-pef mt-1 text-danger">Mari Kita Kenalan dengan Unpad</h4>
 					<div class="row justify-content-center">
 						<div class="col-sm-12">
 							<!--<div id="player1"></div>

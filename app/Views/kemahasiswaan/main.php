@@ -21,10 +21,32 @@
 	<img class="image-bg" src="/images/kemahasiswaan/background.jpg" />
 	<img class="image-bg d-none d-sm-block d-md-none" src="/images/kemahasiswaan/background.jpg" />
 	<div class="content-page">
-		<div class="row no-gutters justify-content-center mt-md-5 mt-4 main-event">
-			<div class="col-md-8 ftco-animate text-center">
-				<h2 class="h1 text-center page-title">Lembaga Kemahasiswaan</h2>
+		<div class="row no-gutters justify-content-center mt-md-3 mt-3 main-event">
+			<div class="col-md-12 col-sm-12 ftco-animate text-center">
+				<h2 class="h1 text-center page-title mt-3 text-dark">Lembaga Kemahasiswaan</h2>
+				<div class="row justify-content-center mt-5">
+					<div class="col-md-5">
+						<div class="video-container">
+							<div class="iframe-container">
+								<?= generate_yt_iframe('L5K35F0RoPs'); ?>
+							</div>
+						</div>
+						<!--<div class="container-bg">
+							<img class="image-bg" src="/images/commingsoon_poster.png" />
+						</div>-->
+					</div>
 
+					<div class="col-md-5">
+						<div class="video-container">
+							<div class="iframe-container">
+								<?= generate_yt_iframe('IOC7lOeU6ps'); ?>
+							</div>
+						</div>
+						<!--<div class="container-bg">
+							<img class="image-bg" src="/images/commingsoon_poster.png" />
+						</div>-->
+					</div>
+				</div>
 					
 			</div>
 		</div>

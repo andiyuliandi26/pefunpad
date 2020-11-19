@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/jquery.countdown.css">
     <!--<link rel="stylesheet" href="<?php echo base_url(); ?>/css/style.css">-->
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/pefunpad.css" type="text/css">
+
       <script src="<?php echo base_url(); ?>/js/jquery-3.2.1.min.js"></script>
       <!--<script src="js/jquery-migrate-3.0.1.min.js"></script>-->
   </head>
@@ -258,7 +259,16 @@
 
 		  <div id="content">
 			  <?= $this->renderSection('content'); ?>
+			  
+			  <div class="row no-gutters justify-content-center ftco-footer text-white py-2">
+				<div class="col-md-12">
+					<marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="8">
+						"Hi, Padjadjaran Mates Follow media sosial PEF untuk mendapatkan informasi menarik dan edukatif. Instagram: <a href="https://www.instagram.com/pef_unpad/" target="_blank" class="card-link ml-0">@Pef_Unpad</a>, Youtube: <a href="https://www.youtube.com/channel/UCTT3JyiBKflPI6zkyoNM1Yg" target="_blank" class="card-link ml-0">Padjadjaran Education Festival</a>, TikTok: <a href="https://vt.tiktok.com/ZSmxJDpH/" target="_blank" class="card-link ml-0">@Pef_Unpad</a>, Twitter: <a href="https://twitter.com/PEF_unpad" target="_blank" class="card-link ml-0">@PEF_Unpad</a>,  Line: <a href="" target="_blank" class="card-link ml-0">@Pefunpad</a>, Facebook: <a href="https://www.facebook.com/pefunpad2020" target="_blank" class="card-link ml-0">Padjadjaran Education Festival</a>. Yuk dengarkan konten menarik di podcast <a href="https://link.tospotify.com/Um5bT5JIxbb" target="_blank" class="card-link ml-0">Padjadjaran Education Festival</a>. <strong class="text-danger">Let's Fly High, Padjadjaran Mates!</strong>"
+					</marquee>
+				</div>
+			</div>
 		  </div>
+
 
 		  <footer class="ftco-footer ftco-bg-dark ftco-section py-sm-3">
 			  <?= $this->include('/layouts/footer', $data); ?>
@@ -280,7 +290,10 @@
       <script src="<?php echo base_url(); ?>/js/flipdown.min.js"></script>
       <script src="<?php echo base_url(); ?>/js/jquery.countdown.js"></script>
       <script src="<?php echo base_url(); ?>/js/main.js"></script>
-	  
-       <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+	  <script>
+		  $(document).ready(function () {
+			  $('[data-toggle="tooltip"]').tooltip();
+		  });
+	  </script>
 </body>
 </html>

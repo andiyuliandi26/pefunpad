@@ -38,6 +38,10 @@
                     <label>Status Peserta</label>
                     <?php echo form_dropdown("statuspeserta", $statuspesertalist,  $data->statuspeserta, ['class' => 'custom-select']); ?>
                  </div>
+                <div class="form-group col-md-9">
+                    <label>Video Url (Youtube ID)</label>
+                    <?php echo form_input('videourl', $data->videourl, ['class'=>'form-control']); ?>
+                 </div>
                 <div class="form-group col-md-10">
                     <label>Poster</label>
                     <div class="row">

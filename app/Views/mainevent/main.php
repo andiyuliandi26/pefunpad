@@ -17,22 +17,21 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
 
-    .bg-fakultas {
-		position: relative;
+	.bg-bukutamu {
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         content: '';
-        opacity: .97;
-        background-image: url("/images/fakultas/background.jpg");
+        opacity: 1;
+        background-image: url("/images/mainevent/background_bukutamu.jpg");
         background-repeat: repeat-y;
-        background-size:  100% 100%;
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+        background-size: 100%;
 	}
 </style>
 <div class="container-bg">
-	<img class="image-bg" src="/images/mainevent/background.png" />
+	<img class="image-bg" src="/images/mainevent/background.jpg" />
 	<img class="image-bg d-none d-sm-block d-md-none" src="/images/kemahasiswaan/background.jpg" />
 	<div class="content-page">
         <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 main-event">
@@ -50,14 +49,24 @@
 
 <div class="modal fade" id="BukuTamuModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content border-0">
-      <div class="modal-header bg-success border-0">
-        <h5 class="modal-title text-white" id="staticBackdropLabel">Buku tamu</h5>
+    <div class="modal-content border-0 bg-bukutamu">
+      <div class="modal-header border-0 text-center">
+          <div class="row justify-content-center text-center">
+              <div class="col-md-2 col-sm-2">
+                <a href="<?= base_url(); ?>" class="mr-4 card-link">
+                  <img class="img-fluid" src="<?= base_url() ?>/images/logopef.png" height="60">
+                </a>
+              </div>
+              <div class="col-md-12">
+                <h5 class="text-white" id="staticBackdropLabel">Buku tamu</h5>
+              </div>
+          </div>
+        
         <!--<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>-->
       </div>
-      <div class="modal-body bg-success subscribe-form">
+      <div class="modal-body subscribe-form">
             <div class="row no-gutters">
                 <div class="col-md-12 my-3">
                     <div class="form-group text-dark">
@@ -82,8 +91,8 @@
                 </div>
             </div>
       </div>
-      <div class="modal-footer bg-success">
-        <button type="button" class="btn btn-dark" onclick="submitBukuTamu()">Submit</button>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" onclick="submitBukuTamu()">Submit</button>
       </div>
     </div>
   </div>

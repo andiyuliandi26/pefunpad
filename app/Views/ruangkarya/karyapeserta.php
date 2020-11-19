@@ -30,11 +30,23 @@
 	<div class="bg-ruangkarya">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center  pt-md-5">
-				<div class="col-md-12 ftco-animate text-center">
-					<h1 class="text-center font-pef text-dark mt-3">Karya Peserta</h1>
+				<div class="col-md-1 text-right mt-2">
+					<a href="/ruangkarya" class="card-link"><i class="fa fas fa-arrow-left text-dark h2"></i></a>
+				</div>
+				<div class="col-md-11 ftco-animate text-center">
+					<h2 class="text-center font-pef text-dark mt-3">Karya Peserta</h2>
 					<h2 class=" font-pef">Kategori <?php echo $karyapeserta[0]->kategori; ?></h2>
 					<h3 class="text-center text-dark mt-3 font-pef">Juara</h3>
+					<?php
+							if($karyapeserta[0]->imagepemenang != NULL):;?>		
+								<div class="row justify-content-center">
+									<div class="col-md-4">
+										<img class="img-fluid" src="<?= base_url(); ?>/images/ruangkarya/<?= $karyapeserta[0]->imagepemenang; ?>" alt="Foto Pemenang" />
+									</div>
+								</div>
+						<?php endif; ?>
 					<div class="row justify-content-center">
+						
 						<?php
 							$index = 0;
 							foreach($karyapeserta as $items):?>

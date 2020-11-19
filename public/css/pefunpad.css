@@ -445,7 +445,7 @@
 .ftco-navbar-light.scrolled .nav-link {
     padding-top: 0.9rem !important;
     padding-bottom: 0.9rem !important;
-    color: #404044 !important;
+    /*color: #404044 !important;*/
 }
 
     .ftco-navbar-light.scrolled .nav-link:hover {

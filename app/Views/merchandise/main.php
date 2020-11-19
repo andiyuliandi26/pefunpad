@@ -27,7 +27,7 @@
 			<div class="row no-gutters justify-content-center main-event mt-md-2">
 				<div class="col-lg-8 col-md-12 col-sm-12 ftco-animate text-center">
 					<h2 class="h1 text-center page-title text-danger mt-2">Merchandise</h2>
-					<div class="row justify-content-center">
+					<div class="row justify-content-between">
 						<?php foreach($merchandise as $items): ?>
 							<div class="col-lg-3 col-md-3 col-sm-4">
 								<img class="img-fluid" src="/images/merchandise/<?php echo $items->imageurl; ?>?>" alt="<?php echo $items->namaproduk; ?>" />
