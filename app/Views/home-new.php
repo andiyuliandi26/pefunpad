@@ -11,7 +11,7 @@
 		right: 0;
 		bottom: 0;
 		content: '';
-		opacity: .97;
+		opacity: 1;
 		background-image: url("/images/homepage/bg/background-full.png");
 		/*background-position: center;*/
 		background-repeat: repeat-y;
@@ -28,7 +28,7 @@
 					<h3 class="text-dark page-title"> <?= $event->eventdatetitle; ?> </h3>
 					<div id="countdown" class="countdownHolder d-none d-sm-block"></div>
 				</div>
-				<div class="col-md-7 col-lg-8 col-sm-8 ftco-animate text-center mb-2">
+				<div class="col-md-7 col-lg-8 col-sm-8 col-xs-6 ftco-animate text-center mb-2">
 					<div class="video-container">
 						<img class="img-fluid" src="/images/mainevent/<?= $event->posterurl; ?>" />
 					</div>
@@ -280,7 +280,7 @@
 				
 			<!--</div>-->
 			<div class="embed-responsive embed-responsive-16by9">
-				<video width="320" height="240" autoplay loop class="embed-responsive-item" >
+				<video width="320" height="240" class="embed-responsive-item" autoplay loop autobuffer muted playsinline>
 					<source src="/videos/welcome_screen.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video> 
