@@ -74,8 +74,8 @@
 	                                        <img class="image-bg" src="/images/bg-login-form.png" />
 	                                        <div class="content-page">
 		                                        <div class="form-label-group">
-                                                    <input name="login" type="text" class="form-control bg-transparent border-0 mt-3 pl-5" id="input-username" placeholder="Username atau e-Mail" required autofocus autocomplete="new-password" autocapitalize="off">
-                                                    <label for="input-username" class="text-white h4">Username atau e-Mail</label>
+                                                    <input name="login" type="text" class="form-control bg-transparent border-0 mt-3 pl-5" id="input-username" placeholder="Kode Tiket / Email" required autofocus autocomplete="new-password" autocapitalize="off">
+                                                    <label for="input-username" class="text-white h4">Kode Tiket / Email</label>
                                                     <div class="invalid-feedback">
 								                        <?= session('errors.login') ?>
 							                        </div>

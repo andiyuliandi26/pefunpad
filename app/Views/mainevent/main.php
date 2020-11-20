@@ -98,6 +98,11 @@
               <div class="col-md-12">
                 <h5 class="text-white" id="staticBackdropLabel">Buku tamu</h5>
               </div>
+              <div class="col-md-11">
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert" id="showAlert" style="display:none;">
+                      <div id="alert-content" class="text-left"></div>
+                    </div>
+              </div>
           </div>
         
         <!--<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
@@ -150,23 +155,31 @@
         var nohp = $('#NoHP').val();
         var asalsekolah = $('#AsalSekolah').val();
 
-        if (nama == "" || email == "" || nohp == "" || asalsekolah == "") {
-            alert("Pengisian buku tamu belum lengkap.");
-        } else {
-            $.ajax({
-                url: '<?php echo base_url()."/api/mainevent/create";?>',
-                type: 'POST',
-                dataType: "json",
-                data: {eventid: eventid, namatamu: nama, email: email, nohp:nohp, asalsekolah:asalsekolah},
-                success: function (data) {
-                    if (!data.error) {
-                        $('#BukuTamuModal').modal('hide');
-                    } else {
-                        alert(data.data);
+        $.ajax({
+            url: '<?php echo base_url()."/api/mainevent/create";?>',
+            type: 'POST',
+            dataType: "json",
+            data: {eventid: eventid, namatamu: nama, email: email, nohp:nohp, asalsekolah:asalsekolah},
+            success: function (data) {
+                if (!data.error) {
+                    $('#BukuTamuModal').modal('hide');
+                } else {
+                    if (data.status == 404) {
+                        var alertMessage = "";
+                        var errorMessage = Object.values(data.response_message);
+                        for (var i = 0; i < errorMessage.length; i++) {
+                            alertMessage += '<span>' + errorMessage[i] + '</span></br>';
+                        }
+                        $('#alert-content').empty().append(alertMessage);
+                        $('#showAlert').show();
+                        console.log(errorMessage);
                     }
+
+                    console.log(data);
+                    //alert(data.data);
                 }
+            }
 		});
-        }
     }
 </script>
 <?php echo $this->endSection('content'); ?>
