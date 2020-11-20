@@ -47,10 +47,7 @@
 	<div class="bg-ruangkarya">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center  pt-md-5">
-				<div class="col-md-1 text-right mt-2">
-					
-				</div>
-				<div class="col-md-11 ftco-animate text-center">
+				<div class="col-md-12 ftco-animate text-center">
 					<h2 class="text-center font-pef text-dark mt-3"><a href="/ruangkarya" class="card-link float-left"><i class="fa fas fa-arrow-left text-dark h2"></i></a> Karya Peserta</h2>
 					<h2 class=" font-pef">Kategori <?php echo $karyapeserta[0]->kategori; ?></h2>
 					<h3 class="text-center text-dark mt-3 font-pef">Juara</h3>
