@@ -47,11 +47,11 @@
 						foreach($data as $items): 
 											
 						?>
-							<div class="col-md-4 col-mb-6 my-3">
+							<div class="col-md-5 col-mb-10 my-3">
 								<div class="iframe-container rounded-0">
 									<?= generate_yt_iframe($items->videourl); ?>
 								</div>
-								<p class="page-title font-pef text-white mb-0 bg-dark py-2"><?= $items->namavideo;?></p>
+								<h3 class="h3 font-pef text-white mb-0 bg-dark py-2"><?= $items->namavideo;?></h3>
 							</div>
 						<?php 
 							$index++;
@@ -62,23 +62,5 @@
 		</div>
 	</div>
 </div>
-<!--<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
-	<img class="image-bg" src="/images/virtualtour/background.jpg" />
-	<img class="image-bg" src="/images/virtualtour/background.jpg" />
-	<div class="content-page">
-		<div class="row no-gutters justify-content-center mt-md-5 mt-4 main-event"><div class="col-md-12 ftco-animate text-center">
-					<h2 class="h1 text-center page-title mt-3 text-dark">Virtual Tour</h2>
-					<div class="row justify-content-center px-2">
-						<?php for($i = 0; $i < 18; $i++): ?>
-							<div class="col-md-2 col-sm-3 my-2">
-								<img class="img-fluid" src="/images/bg-video.png" />
-							</div>
-						<?php endfor;?>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</div>-->
+
 <?php echo $this->endSection('content'); ?>
