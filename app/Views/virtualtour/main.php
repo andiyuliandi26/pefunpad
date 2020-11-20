@@ -43,7 +43,7 @@
 				<h2 class="h1 text-center page-title mt-3 text-dark">Virtual Tour</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-3 col-sm-4 col-mb-8">
-						<div class="card bg-dark">
+						<div class="card bg-secondary">
 							<img src="/images/virtualtour/sponsor.png" class="img-fluid"/>
 						</div>
 						<!--<div class="embed-responsive embed-responsive-16by9">
