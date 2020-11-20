@@ -65,7 +65,7 @@
 							$index = 0;
 							foreach($karyapeserta as $items):?>
 							<?php if(strstr($items->statuspeserta, "Juara")): ?>
-								<div class="col-md-3 col-mb-6 my-4">
+								<div class="col-md-3 col-mb-12 my-4">
 									<div class="text-container px-3">
 										<div class="card-body text-left">	
 											<h3 class="text-center font-pef"><?= $items->statuspeserta; ?></h3>
