@@ -42,6 +42,17 @@
 			<div class="col-md-12 ftco-animate text-center">
 				<h2 class="h1 text-center page-title mt-3 text-dark">Virtual Tour</h2>
 				<div class="row justify-content-center">
+					<div class="col-md-3 col-sm-4 col-mb-8">
+						<div class="embed-responsive embed-responsive-16by9">
+							<video width="320" height="240" class="embed-responsive-item" autoplay loop autobuffer muted playsinline>
+								<source src="/videos/bumper_sponsor.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					
 					<?php
 						$index = 1;
 						foreach($data as $items): 

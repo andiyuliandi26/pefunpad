@@ -14,7 +14,7 @@
 			opacity: 1;
 			background-image: url("/images/mainevent/background.jpg");
 			background-repeat: repeat-y;
-			background-size: 100%;
+			background-size: cover;
 		}
 	}
 
@@ -63,14 +63,23 @@
 </style>
 <div class="bg-mainevent">
     <div class="container-page">
-        <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 mb-5 main-event">
+        <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 mb-5 pb-5 main-event">
 			<div class="col-md-8 text-center">
-				<h2 class="h1 text-center page-title mt-3" data-aos="fade-down">Main Event</h2>
+				<h2 class="h1 text-center page-title mt-md-0 mt-lg-0 mt-3" data-aos="fade-down">Main Event</h2>
 			</div>
 			<div class="col-xl-8 col-md-10 col-sm-12">
-                <div class="container-bg">
+                <?php if($event->livestreamingurl != ""): ?>
+                    <div class="video-container">
+						<div class="iframe-container">
+							<?= generate_yt_iframe($event->livestreamingurl); ?>
+						</div>
+					</div>
+                <?php else: ?>
+                 <div class="container-bg">
 					<img class="image-bg" src="/images/commingsoon_poster.png" />
 				</div>
+                <?php endif; ?>
+               
 			</div>
 		</div>
     </div>

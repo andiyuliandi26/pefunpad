@@ -364,23 +364,18 @@
 
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-lg">
-		<div class="modal-content">
-			<!--<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>-->
-			<!--<div class="modal-body text-center pb-5">-->
-				
-				<!--<img src="/images/homepage/welcome_message.jpg" />-->
-				
-			<!--</div>-->
-			<div class="embed-responsive embed-responsive-16by9">
-				<video width="320" height="240" class="embed-responsive-item" autoplay loop autobuffer muted playsinline>
-					<source src="/videos/welcome_screen.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video> 
+		<div class="modal-content bg-transparent border-0">
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-md-12 col-mb-8">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video width="320" height="240" class="embed-responsive-item" autoplay loop autobuffer muted playsinline>
+							<source src="/videos/welcome_screen.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video> 
+					</div>
+				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>
