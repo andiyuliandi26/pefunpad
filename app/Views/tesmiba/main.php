@@ -4,7 +4,7 @@
 ?>
 
 <style>
-	.bg-tesmiba {
+	/*.bg-tesmiba {
 		position: relative;
         top: 0;
         left: 0;
@@ -16,10 +16,40 @@
         background-repeat: repeat-y;
         background-size: 100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+	}*/
+
+	@media (orientation: landscape) {
+		.bg-tesmiba {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/tesmiba/background.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-tesmiba {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/tesmiba/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
 	}
 
 </style>
-<div class="hero-wrap d-none d-lg-block d-sm-none">
 	<div class="bg-tesmiba">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center pt-md-5">
@@ -40,7 +70,7 @@
 					<div class="row justify-content-center mt-5 mb-5">
 						<div class="col-md-12">
 							<div class="text-container">
-								<h4 class="text-center font-pef h3 text-dark">Dokumentasi</h4>
+								<h4 class="text-center font-pef h3 mt-3 text-dark">Dokumentasi</h4>
 								<div class="card-body">									
 									<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 									  <div class="carousel-inner">
@@ -90,67 +120,7 @@
 			</div>
 		</div>
 	</div>
-</div>
 
-
-<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
-	<img class="image-bg" src="/images/tesmiba/background.jpg" />
-	<img class="image-bg" src="/images/tesmiba/background.jpg" />
-	<div class="content-page">
-		<div class="row no-gutters justify-content-center mt-md-5 mt-4 main-event">
-			<div class="col-md-10 col-sm-10 ftco-animate text-center">
-				<h2 class="h1 text-center page-title text-dark mt-3">Tes Miba</h2>
-				<h4 class="text-center font-pef h3 text-dark">Apa Itu Tes Miba?</h4>
-				<div class="row justify-content-center">
-					<div class="col-md-12 col-sm-12">
-						<div class="text-container">
-							<div class="card-body">									
-								<p class="text-justify">
-									Tes Minat Bakat merupakan sebuah rangkaian tes dan analisis yang menggambarkan kemampuan kognitif, karakterisik minat, serta kepribadian terhadap suatu bidang/jurusan tertentu. PEF tetap hadir dan memberikan fasilitas kepada sista/siswi SMA/SMK sederajat untuk dapat mengetahui karakterisik belajar dan jurusan apa yang sekiranya sesuai untuk mereka di jenjang perkuliahan nanti.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-					
-			</div>
-		</div>
-		<div class="row justify-content-center mt-5 px-sm-2">
-			<div class="col-md-3 col-sm-6 mb-sm-3">
-				<div class="text-container">
-					<div class="card-body">									
-						<p class="lead text-justify">
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 mb-sm-3">
-				<div class="text-container">
-					<div class="card-body">									
-						<p class="lead text-justify">
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="text-container">
-					<div class="card-body">									
-						<p class="lead text-justify">
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="text-container">
-					<div class="card-body">									
-						<p class="lead text-justify">
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <?php 
     echo $this->EndSection('content');
 ?>

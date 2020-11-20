@@ -6,7 +6,7 @@
 <footer class="ftco-footer ftco-bg-dark ftco-section py-sm-3">
     <div class="container">
         <div class="row mb-3 justify-content-center text-center ">
-        <div class="col-md-6 col-sm-12 mb-sm-5">
+        <div class="col-md-6 col-sm-12 mb-sm-5 mb-5 pb-5">
             <div class="ftco-footer-widget">
                 <h2 class="font-pef footer-title mb-2">Sponsorship</h2>
                 <div class="row justify-content-center mt-md-2">
@@ -15,7 +15,7 @@
 					    {
                             $colWidthmd = 3;
                             $colWidthsm = 2;
-						    echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
+						    echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} col-mb-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
 						    echo "<a href='{$items->hyperlink}' target='_blank' class='mx-2'><img src='/images/sponsorship/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                             echo "</div>";
 					    }
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-sm-12 mt-sm-3">
+        <div class="col-md-6 col-sm-12">
             <div class="ftco-footer-widget mb-4 ml-md-5">
                 <h2 class="font-pef footer-title mb-2">Media Partner</h2>
                 <div class="row justify-content-center mt-md-2">
@@ -33,7 +33,7 @@
 			                {
                                 $colWidthmd = 3;
                                 $colWidthsm = 2;
-						        echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
+						        echo "<div class='col-lg-{$items->type} col-md-{$colWidthmd} col-sm-{$colWidthsm} col-mb-{$colWidthsm} mt-3' data-aos='fade-zoom-in'>";
 				                echo "<a href='{$items->hyperlink}' target='_blank' class='mx-3'><img src='/images/mediapartner/{$items->imageurl}' alt='{$items->nama}' class='img-fluid'></a>";
                                 echo "</div>";
 			                }

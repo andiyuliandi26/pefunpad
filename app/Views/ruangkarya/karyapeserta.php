@@ -3,18 +3,35 @@
     echo $this->section('content');
 ?>
 <style>
-	.bg-ruangkarya {
-		position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        opacity: .97;
-        background-image: url("/images/ruangkarya/background.jpg");
-        background-repeat: repeat-y;
-        background-size: 100% auto;
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+	@media (orientation: landscape) {
+		.bg-ruangkarya {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/ruangkarya/background.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-ruangkarya {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/ruangkarya/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
 	}
 
 	.ruangkarya-link:hover {
@@ -51,7 +68,7 @@
 							$index = 0;
 							foreach($karyapeserta as $items):?>
 							<?php if(strstr($items->statuspeserta, "Juara")): ?>
-								<div class="col-md-3 my-4">
+								<div class="col-md-3 col-mb-6 my-4">
 									<div class="text-container px-3">
 										<div class="card-body text-left">	
 											<h3 class="text-center font-pef"><?= $items->statuspeserta; ?></h3>

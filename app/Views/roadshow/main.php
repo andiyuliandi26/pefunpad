@@ -29,7 +29,7 @@
 			content: '';
 			opacity: .97;
 			background-position: center;
-			background-image: url("/images/roadshow/background.jpg");
+			background-image: url("/images/roadshow/background-portrait.jpg");
 			background-repeat: repeat-y;
 			background-size: cover;
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );

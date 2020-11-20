@@ -3,7 +3,38 @@
     echo $this->section('content');
 ?>
 <style>
-	.bg-fakultas {
+	@media (orientation: landscape) {
+		.bg-fakultas {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/fakultas/background-full.png");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-fakultas {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/fakultas/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	/*.bg-fakultas {
 		position: relative;
         top: 0;
         left: 0;
@@ -16,7 +47,7 @@
         background-size:  100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
-
+*/
 
 		.bg-fakultas .img-fluid {
 			border-radius:10px;
@@ -57,69 +88,59 @@
 	  padding: 16px 32px;
 	}
 </style>
-<div class="hero-wrap d-none d-lg-block d-sm-none">
-	<div class="bg-fakultas">
-		<div class="container-page">
-			<div class="row no-gutters justify-content-center pt-md-5">
-				<div class="col-md-12 text-center">
 
-					<h2 class="h1 text-center page-title mt-3 text-danger">Fakultas</h2>
-					<div class="row justify-content-center mt-3">
-						<?php
+<div class="bg-fakultas">
+	<div class="container-page">
+		<div class="row no-gutters justify-content-center pt-md-5 mb-5">
+			<div class="col-md-12 text-center">
+				<h2 class="h2 text-center font-pef  mt-3 text-danger">Fakultas</h2>
+				<div class="row justify-content-center pt-3">
+
+					<?php
 						$index = 1;
 						foreach($fakultas as $items): ?>							
-							<!--<div class="col-md-2 my-3" data-aos="zoom-in">
-								
-									<img data-toggle="modal" data-target="#modal<?php echo $index; ?>"  class="img-fluid" src="/images/fakultas/<?php echo $items->image_url; ?>" alt="<?php echo $items->singkatan; ?>" />
-							
-							</div>-->
-							<a class="col-md-2 col-sm-2 my-3 px-sm-2 image-link" href="/fakultas/detail/<?= $items->id; ?>">
+							<a class="col-md-2 col-sm-2 col-mb-3 my-3 px-sm-2 mx-xs-2 image-link" href="/fakultas/detail/<?= $items->id; ?>">
 								<img class="img-fluid" src="/images/fakultas/<?php echo $items->imageurl; ?>" alt="<?php echo $items->singkatan; ?>" />
-								  <div class="image-overlay">
+									<div class="image-overlay">
 									<div class="image-text-overlay"><?= $items->singkatan ?></div>
-								  </div>
-							</a>
-						<?php 
-							$index++;	
-							endforeach; ?>
-					</div>
-					
-					<h2 class="h1 text-center page-title mt-5 text-danger">Markipad</h2>
-				<h4 class="h4 text-center font-pef mt-1 text-danger">Mari Kita Kenalan dengan Unpad</h4>
-					<div class="row justify-content-center">
-						<div class="col-md-12">
-							<!--<div id="player1"></div>
-							<div id="player2"></div>
-							<div id="player3"></div>-->
-							<div class="card bg-dark">
-								<div class="card-body">
-									<div class="row justify-content-center">
-										<?php
-											$index = 1;
-										foreach($markipad as $items): 
-											
-										?>
-											<div class="col-md-3 my-3">
-												<div class="iframe-container rounded-0">
-													<?= generate_yt_iframe($items->videourl); ?>
-													<!--<div id="player<?= $index; ?>"></div>-->
-													<!--<iframe class="responsive-iframe" src="<?= $items->videourl; ?>?controls=2" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-													
-												</div>
-												<p class="lead text-white mb-0"><?= $items->namavideo;?></p>
-											</div>
-										<?php 
-											$index++;
-										endforeach; ?>
-
-										<!--<div class="col-md-12">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNHAvFWRbdAydbr9RLnHVqrZVb_rtHb9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										</div>-->
 									</div>
+							</a>
+					<?php  $index++; endforeach; ?>
+				</div>
+			</div>
+			<div class="col-md-12 text-center">
+				<h2 class="h2 text-center font-pef mt-5 text-danger">Markipad</h2>
+				<h4 class="h4 text-center font-pef mt-1 text-danger">Mari Kita Kenalan dengan Unpad</h4>
+			</div>
+			<div class="col-md-12 text-center">
+				<!--<div id="player1"></div>
+				<div id="player2"></div>
+				<div id="player3"></div>-->
+				<div class="card bg-dark">
+					<div class="card-body">
+						<div class="row justify-content-center">
+							<?php
+								$index = 1;
+							foreach($markipad as $items): 
+											
+							?>
+								<div class="col-md-3 col-mb-6 my-3">
+									<div class="iframe-container rounded-0">
+										<?= generate_yt_iframe($items->videourl); ?>
+										<!--<div id="player<?= $index; ?>"></div>-->
+										<!--<iframe class="responsive-iframe" src="<?= $items->videourl; ?>?controls=2" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+													
+									</div>
+									<p class="lead text-white mb-0"><?= $items->namavideo;?></p>
 								</div>
-							</div>
+							<?php 
+								$index++;
+							endforeach; ?>
+
+							<!--<div class="col-md-12">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNHAvFWRbdAydbr9RLnHVqrZVb_rtHb9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>-->
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -127,7 +148,8 @@
 	</div>
 </div>
 
-<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
+
+<!--<div class="container-bg d-none d-md-block d-sm-block d-lg-none">
 	<img class="image-bg" src="/images/fakultas/background.jpg" />
 	<img class="image-bg" src="/images/fakultas/background.jpg" style="transform:rotate(180deg);"/>
 	<img class="image-bg" src="/images/fakultas/background.jpg""/>
@@ -150,11 +172,11 @@
 				<h2 class="h1 text-center page-title mt-5 text-danger">Markipad</h2>
 				<h4 class="h4 text-center font-pef mt-1 text-danger">Mari Kita Kenalan dengan Unpad</h4>
 					<div class="row justify-content-center">
-						<div class="col-sm-12">
+						<div class="col-sm-12">-->
 							<!--<div id="player1"></div>
 							<div id="player2"></div>
 							<div id="player3"></div>-->
-							<div class="card bg-dark">
+							<!--<div class="card bg-dark">
 								<div class="card-body">
 									<div class="row justify-content-center">
 										<?php
@@ -164,19 +186,19 @@
 										?>
 											<div class="col-sm-3 my-3">
 												<div class="iframe-container">
-													<?= generate_yt_iframe($items->videourl); ?>
+													<?= generate_yt_iframe($items->videourl); ?>-->
 													<!--<div id="player<?= $index; ?>"></div>-->
 													<!--<iframe class="responsive-iframe" src="<?= $items->videourl; ?>?controls=2" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-												</div>
+												<!--</div>
 											</div>
 										<?php 
 											$index++;
-										endforeach; ?>
+										endforeach; ?>-->
 
 										<!--<div class="col-md-12">
 											<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNHAvFWRbdAydbr9RLnHVqrZVb_rtHb9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>-->
-									</div>
+									<!--</div>
 								</div>
 							</div>
 						</div>
@@ -185,7 +207,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
 
 <?php
 	$index2 = 1;

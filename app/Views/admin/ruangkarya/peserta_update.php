@@ -10,6 +10,7 @@
     <div class="card shadow h-100 ">
         <div class="card-body">
             <div class="form-row">
+
                  <div class="form-group col-md-3">
                     <label>Kategori</label>
                     <?php echo form_dropdown("kategoriid", $kategorilist, $data->kategoriid, ['class' => 'custom-select']); ?>
@@ -40,23 +41,29 @@
                  </div>
                 <div class="form-group col-md-9">
                     <label>Video Url (Youtube ID)</label>
-                    <?php echo form_input('videourl', $data->videourl, ['class'=>'form-control']); ?>
+                    <?php echo form_input('videourl', "{$data->videourl}", ['class'=>'form-control']); ?>
                  </div>
                 <div class="form-group col-md-10">
                     <label>Poster</label>
                     <div class="row">
                         <div class="col-md-2">
-                            <img class="img-fluid" src="/images/ruangkarya/<?php echo $data->imageurl; ?>" />
+                            <?php if($data->imageurl != ""): ?>
+                                <img class="img-fluid" src="/images/ruangkarya/<?php echo $data->imageurl; ?>" />
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php echo form_upload('imageupload', '', ['class' => 'form-control-file', 'id' => 'imageupload']); ?>
                  </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-3">
+                    <label>Is Active</label>
+                    <?php echo form_input('isactive', "{$data->isactive}", ['class'=>'form-control']); ?>
+                 </div>
+                <!--<div class="form-group col-md-12">
                     <div class="custom-control custom-switch">                   
-                        <?php echo form_checkbox('isactive', 1,  $data->isactive, ['class'=>'custom-control-input', 'id' => 'customSwitch']); ?>
-                        <label class="custom-control-label" for="customSwitch">Is Active?</label>
+                        <?php echo form_checkbox('isactives', 1, $data->isactive, ['class'=>'custom-control-input', 'id' => 'customSwitchs']); ?>
+                        <label class="custom-control-label" for="customSwitchs">Is Active?</label>
                     </div>
-                </div>
+                </div>-->
             </div>            
         </div>
         <div class="card-footer">

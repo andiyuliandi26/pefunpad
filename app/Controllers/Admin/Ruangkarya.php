@@ -146,19 +146,20 @@ class Ruangkarya extends AdminBaseController
 			    $imageName = $file->getName();
 			}
 
+			
 			if(!$this->ruangkarya_peserta->update($id,[
 			    'kategoriid' => $this->request->getPost('kategoriid'),			    
-					'namatim' => $this->request->getPost('namatim'),			    
-					'namapeserta' => $this->request->getPost('namapeserta'),			    
-					'asalsekolah' => $this->request->getPost('asalsekolah'),			    
-					'judulkarya' => $this->request->getPost('judulkarya'),			    
-					'jeniskarya' => $this->request->getPost('jeniskarya'),			    
-					'statuspeserta' => $this->request->getPost('statuspeserta'),			    
-					'videourl' => $this->request->getPost('videourl'),			    
-					'imageurl' => $imageName,			    
-					'isactive'  => $this->request->getPost('isactive'),
+			        'namatim' => $this->request->getPost('namatim'),			    
+			        'namapeserta' => $this->request->getPost('namapeserta'),			    
+			        'asalsekolah' => $this->request->getPost('asalsekolah'),			    
+			        'judulkarya' => $this->request->getPost('judulkarya'),			    
+			        'jeniskarya' => $this->request->getPost('jeniskarya'),			    
+			        'statuspeserta' => $this->request->getPost('statuspeserta'),			    
+			        'videourl' => $this->request->getPost('videourl'),	
+			        'isactive'  => $this->request->getPost('isactive'),		    
+			        'imageurl' => $imageName,			    
 			])){
-				session()->setFlashdata('danger', 'Penambahan data gagal. '. $this->ruangkarya_peserta->errors());
+			    session()->setFlashdata('danger', 'Perubahan data gagal. '. $this->ruangkarya_peserta->errors());
 				return redirect()->back();
 			}
 

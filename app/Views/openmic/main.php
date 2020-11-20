@@ -3,6 +3,39 @@
     echo $this->section('content');
 ?>
 <style>
+
+	@media (orientation: landscape) {
+		.bg-openmic {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/openmic/background.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-openmic {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/openmic/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+/*
+
 	.bg-openmic {
 		position: absolute;
         top: 0;
@@ -15,7 +48,7 @@
         background-repeat: repeat-y;
         background-size: cover;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
-	}
+	}*/
 
 	.burung1 {
 		max-height:100px;
@@ -40,12 +73,10 @@
 </style>
 	  <link href="<?php echo base_url(); ?>/css/animation.css" rel="stylesheet" type="text/css"/>
 
-<div class="container-bg">
-	<img class="image-bg" src="/images/openmic/background.jpg" />
-	<img class="image-bg d-none d-sm-block d-md-none" src="/images/openmic/background.jpg" />
-	<div class="content-page">
-		<div class="row no-gutters justify-content-center main-event mt-md-3 mt-sm-5">
-			<div class="col-md-12">
+<div class="bg-openmic">
+	<div class="container-page">
+		<div class="row justify-content-center main-event mt-md-3 mt-sm-5 mb-3">
+			<!--<div class="col-md-12">-->
 				<!--<div class="particle elem1 anim-delay1">
 					<img src="/animasi/burung_1.gif" class="img-fluid"/>
 				</div>-->
@@ -64,42 +95,28 @@
 				<!--<div class="particle elem6 anim-delay6">
 					<img src="/animasi/burung_6.gif" class="img-fluid" />
 				</div>-->
-			</div>
-			<div class="col-md-12 col-sm-12 ftco-animate text-center">
+			<!--</div>-->
+			<div class="col-md-12 col-sm-12 ftco-animate text-center mb-4">
 				<h2 class="h1 text-center page-title mt-3 text-dark">Spektrum Alumni Unpad</h2>
-				<div class="row justify-content-center mt-5">
-					<div class="col-md-5">
-						<div class="video-container">
-							<div class="iframe-container">
-								<?= generate_yt_iframe('pudgVX-KN5g'); ?>
-							</div>
-						</div>
-						<!--<div class="container-bg">
-							<img class="image-bg" src="/images/commingsoon_poster.png" />
-						</div>-->
-					</div>
+			</div>
 
-					<div class="col-md-5">
-						<div class="video-container">
-							<div class="iframe-container">
-								<?= generate_yt_iframe('i3OIXOOkeTw'); ?>
-							</div>
-						</div>
-						<!--<div class="container-bg">
-							<img class="image-bg" src="/images/commingsoon_poster.png" />
-						</div>-->
+			<div class="col-md-5 col-mb-10 mb-5">
+				<div class="video-container">
+					<div class="iframe-container">
+						<?= generate_yt_iframe('pudgVX-KN5g'); ?>
 					</div>
 				</div>
-					
+			</div>
+
+			<div class="col-md-5 col-mb-10">
+				<div class="video-container">
+					<div class="iframe-container">
+						<?= generate_yt_iframe('i3OIXOOkeTw'); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!--<div class="hero-wrap js-fullheight">
-	<div class="bg-openmic">
-		<div class="container-page">
-			
-		</div>
-	</div>
-</div>-->
+
 <?php echo $this->endSection('content'); ?>

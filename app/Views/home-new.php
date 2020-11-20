@@ -4,29 +4,128 @@
 ?>
 
 <style>
-	.bg-homepage {
-		position: relative;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		opacity: 1;
-		background-image: url("/images/homepage/bg/background-full.png");
-		/*background-position: center;*/
-		background-repeat: repeat-y;
-		background-size: 100% auto;
+	@media screen and (max-width: 575px) {
+		.bg-homepage {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/homepage/bg/background-portrait-full.png");
+			/*background-position: center;*/
+			background-repeat: repeat-y;
+			background-size: 100% auto;
+		}
+
+		.img-small {
+			max-width:300px;
+			max-height:300px;
+		}
+
+		.img-logo-small {
+			max-width:75px;
+			max-height:75px;
+		}
+
+		.col-mb-1 {
+			position:relative;
+			width: 8%;
+		}
+
+		.col-mb-2 {
+			position:relative;
+			width: 15%;
+		}
+
+		.col-mb-3 {
+			position:relative;
+			width: 23.75%;
+		}
+
+		.col-mb-4 {
+			position:relative;
+			width: 31.6%;
+		}
+
+		.col-mb-5 {
+			position:relative;
+			width: 40%;
+		}
+
+		.col-mb-6 {
+			position:relative;
+			width: 45%;
+		}
+
+		.col-mb-7 {
+			position:relative;
+			width: 56%;
+		}
+
+		.col-mb-8 {
+			position:relative;
+			width: 64%;
+		}
+
+		.col-mb-9 {
+			position:relative;
+			width: 72%;
+		}
+
+		.col-mb-10 {
+			position:relative;
+			width: 80%;
+		}
+
+		.col-mb-11 {
+			position:relative;
+			width: 88%;
+		}
+
+		.col-mb-12 {
+			position:relative;
+			width: 95%;
+		}
+
+		.space-between-section {
+			margin-bottom:50px;
+			padding-bottom:50px;
+		}
+
+		.top-section {
+			padding-top:50px !important;
+			padding-bottom:100px !important;
+		}
 	}
+
+	@media (min-width: 576px) {
+		.bg-homepage {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/homepage/bg/background-full.png");
+			/*background-position: center;*/
+			background-repeat: repeat-y;
+			background-size: 100% auto;
+		}
+	}
+
+	
 </style>
 
-<div class="hero-wrap">
-	<div class="bg-homepage">
+<div class="bg-homepage">
 		<div class="container-page">
 
-			<div class="row no-gutters justify-content-center mt-lg-1 mt-md-4 mt-xs-3 mt-2 mb-lg-5 main-event mb-5" data-aos="fade-down">
+			<div class="row no-gutters justify-content-center mt-lg-1 mt-md-4 mt-xs-3 mt-2 mb-lg-5 main-event mb-5 space-between-section top-section" data-aos="fade-down">
 				<div class="col-md-8 col-sm-6 text-center">
 					<h3 class="text-dark page-title"> <?= $event->eventdatetitle; ?> </h3>
-					<div id="countdown" class="countdownHolder d-none d-sm-block"></div>
+					<div id="countdown" class="countdownHolder"></div>
 				</div>
 				<div class="col-md-7 col-lg-8 col-sm-8 col-xs-6 ftco-animate text-center mb-2">
 					<div class="video-container">
@@ -102,22 +201,22 @@
 			</div>
 
 			<div class="d-block d-lg-none">
-				<div class="row no-gutters mt-md-1 mt-2 mb-2">
+				<div class="row no-gutters mt-md-1 mt-2 mb-2 space-between-section">
 					<div class="col-md-3 col-sm-3 col-xs-3 px-sm-2 mr-sm-0 text-center">
 						<div class="row no-gutters justify-content-center">
 							<div class="col-sm-8">						
-								<img class="img-fluid" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />
+								<img class="img-fluid img-small" src="/images/logopef.png" style="cursor:pointer;" onclick="showlogo();" id="peflogobtn" data-aos="fade-up" />
 							</div>
 							<div class="col-sm-8">
 								<p class="logo-title" data-aos="fade-in">in collaboration with</p></div>
 							<div class="col-sm-8">
-								<img class="img-fluid mt-3" src="/images/logoohu.png" data-aos="fade-up" />
+								<img class="img-fluid mt-3 img-small" src="/images/logoohu.png" data-aos="fade-up" />
 							</div>
 						</div>
 					</div>
 					<div class="col-md-9 col-sm-9">
 						<div class="row no-gutters">
-							<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0">
+							<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0 col-mb-2">
 								<img src="/images/homepage/burung.png" class="img-fluid" />
 							</div>
 							<div class="col-md-9 col-sm-10 text-left">
@@ -128,7 +227,7 @@
 							</div>
 						</div>
 						<div class="row no-gutters">
-							<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0">
+							<div class="col-md-2 col-sm-2 col-xs-2 pr-sm-0 col-mb-2">
 								<img src="/images/homepage/kujang.png" class="img-fluid" />
 							</div>
 							<div class="col-md-9 col-sm-10 text-left">
@@ -139,7 +238,7 @@
 							</div>
 						</div>
 						<div class="row no-gutters">					
-							<div class="col-md-2 col-sm-2 pr-sm-0">
+							<div class="col-md-2 col-sm-2 pr-sm-0 col-mb-2">
 								<img src="/images/homepage/jambul.png" class="img-fluid" />
 							</div>
 							<div class="col-md-9 col-sm-10 text-left">
@@ -150,7 +249,7 @@
 							</div>
 						</div>
 						<div class="row no-gutters">					
-							<div class="col-md-2  col-sm-2 pr-sm-0">
+							<div class="col-md-2  col-sm-2 pr-sm-0 col-mb-2">
 								<img src="/images/homepage/warna.png" class="img-fluid" />
 							</div>
 							<div class="col-md-9 col-sm-10 text-left">
@@ -165,17 +264,17 @@
 			</div>
 
 			<!--Maskot PEF Section-->
-			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center">
+			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center space-between-section">
 				<div class="col-md-12 text-center" data-aos="fade-down">
 					<p class="mb-2 font-pef text-danger page-title">Maskot PEF 2020</p>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-3 text-center mx-2" data-aos="fade-right">
+				<div class="col-lg-3 col-md-4 col-sm-3 text-center mx-2 col-mb-6" data-aos="fade-right">
 					<!--<img class="img-fluid" src="/images/maskot-siro.png" />-->
 					<img class="img-fluid" src="/animasi/siro-v2_old.gif" />				
 					<h4 class="font-pef">Siro</h4>
 
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-3 text-center mx-2" data-aos="fade-left">
+				<div class="col-lg-3 col-md-4 col-sm-3 text-center mx-2 col-mb-6" data-aos="fade-left">
 					<!--<img class="img-fluid" src="/images/maskot-vivi.png" />-->
 					<img class="img-fluid" src="/animasi/vivi-v2_old.gif" />
 					<h4 class="font-pef">Vivi</h4>
@@ -198,16 +297,14 @@
 			<!--Maskot PEF Section-->
 
 			<!--Rangkaian Acara Section-->
-			<div class="row no-gutters mt-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-3 justify-content-center" data-aos="zoom-in">
-				<div class="col-md-6 text-center">
+			<div class="row no-gutters mt-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-3 justify-content-center space-between-section">
+				<div class="col-md-12 text-center" data-aos="zoom-in">
 					<p class="mb-2 font-pef text-danger page-title">Rangkaian PEF x OHU 2020</p>
 				</div>
-			</div>
-			<div class="row no-gutters mb-lg-5 pt-sm-2 pb-sm-1 pb-lg-5 justify-content-center ">
 				<?php
 				foreach($rangkaianacara as $items):
 				?>
-					<div class="col-lg-3 col-md-4 col-sm-4 p-3">
+					<div class="col-lg-3 col-md-4 col-sm-4 p-3 col-mb-6">
 						<div class="text-container py-sm-1 py-md-4 text-center" data-aos="zoom-in">
 							<p class="font-pef text-danger rangkaian-acara my-xl-3">
 								<?php echo $items->namaacara; ?>
@@ -223,7 +320,7 @@
 			<!--Rangkaian Acara Section-->
 
 			<!--Throwback Section-->
-			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center"">
+			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center space-between-section">
 				<div class="col-md-12 mb-lg-3 text-center" data-aos="fade-down">
 					<h2 class="mb-3 font-pef text-success page-title">Throwback</h2>
 				</div>
@@ -240,14 +337,14 @@
 			<!--Throwback Section-->
 			
 			<!--Mechandise Section-->
-			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center">
+			<div class="row no-gutters mt-lg-5 mb-lg-5 mt-md-4 mt-sm-4 pt-lg-5 pb-lg-5 justify-content-center space-between-section">
 				<div class="col-md-12 mb-lg-3 text-center" data-aos="fade-down">
 					<h2 class="mb-3 font-pef text-dark page-title">Merchandise</h2>
 				</div>
 				<?php
 					foreach($merchandise as $items):
 					?>
-						<div class="col-md-3 col-sm-3 mx-sm-3 text-center" data-aos="zoom-in">
+						<div class="col-md-3 col-sm-3 col-mb-4 mx-sm-3 text-center" data-aos="zoom-in">
 							<a href="/merchandise">
 								<img src="/images/merchandise/<?php echo $items->imageurl; ?>" alt="<?php echo $items->namaproduk; ?>" class="img-fluid" />
 							</a>
@@ -264,7 +361,6 @@
 			<div class="mt-lg-3 mb-lg-3 pt-lg-3 pb-lg-3"></div>
 		</div>
 	</div>
-</div>
 
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-lg">
