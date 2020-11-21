@@ -12,7 +12,7 @@
 			bottom: 0;
 			content: '';
 			opacity: 1;
-			background-image: url("/images/virtualtour/background.jpg");
+			background-image: url("/images/virtualtour/background-full.jpg");
 			background-repeat: repeat-y;
 			background-size: 100%;
 		}
