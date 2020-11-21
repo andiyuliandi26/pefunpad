@@ -48,7 +48,7 @@
             <h5 class="text-white font-pef mb-3">Contact Us</h5>
             <div class="row justify-content-center" data-aos="fade-zoom-in">
                 <?php foreach($socialmedia as $items): ?>
-                    <div class="col-md-1 col-lg-1 col-sm-2 mx-1" style="max-width:3.5em;">
+                    <div class="col-md-1 col-lg-1 col-sm-2 my-1 mx-2 mx-md-0" style="max-width:3.5em;">
                         <a href="<?= $items->hyperlink ?>" target="_blank" class="card-link stretched-link" data-toggle="tooltip" data-placement="bottom" title="<?= $items->nama ?>">
                             <img src="/images/sosmed/<?= $items->imageurl ?>" class="img-fluid"/>
                             <!--<div class="row mb-2 justify-content-center no-gutters align-items-center">
