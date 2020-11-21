@@ -12,9 +12,9 @@
 			bottom: 0;
 			content: '';
 			opacity: 1;
-			background-image: url("/images/kemahasiswaan/background.jpg");
+			background-image: url("/images/kemahasiswaan/background-portrait.jpg");
 			background-repeat: repeat-y;
-			background-size: 100%;
+			background-size: 100% 100%;
 		}
 	}
 
@@ -56,7 +56,7 @@
 							</div>
 						</div>
 						
-						<div class="row text-left font-weight-bold justify-content-center">
+						<!--<div class="row text-left font-weight-bold justify-content-center">
 							<div class="col-md-4 col-mb-6 ">
 								<ul><li>HIKMI</li><li>PAMASAGI </li><li>PRIME</li><li>KOMPAS </li><li>IKMM<br></li><li>GAMABAN<br></li><li>KMC<br></li><li>GAMAKU<br></li><li>KORAN<br></li><li>KMKB<br></li><li>PKMT</li></ul>
 							</div>
@@ -66,7 +66,7 @@
 							<div class="col-md-4 col-mb-6">
 								<ul><li>GAWAREBON<br></li><li>PAMATEN<br></li><li>HIMAJA<br></li><li>PUB<br></li><li>KMN<br></li><li>KWACI<br></li><li>BANGBARA<br></li><li>CILACAP<br></li><li>COMMEL<br></li><li>KMBU<br></li><li>SOMBA<ul></ul></li></ul>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 							</div>
 						</div>
 						
-						<div class="row text-left font-weight-bold">
+						<!--<div class="row text-left font-weight-bold">
 							<div class="col-md-12 col-mb-12 text-center">
 								<h4 class="font-pef">BSO</h4>
 							</div>
@@ -116,7 +116,7 @@
 							<div class="col-md-12 col-mb-12">
 								<ul><li>Gelanggang Seni Sastra Teater dan Film (GSSTF)<br></li><li>Lembaga Pengkajian dan Pengabdian Masyarakat Demokratis (LPPMD)<br></li><li>IAAS LC Unpad (International Association of Students in Agricultural and Related Sciences)<br></li><li>AIESEC Unpad (Association Internationale des Etudiants en Sciences Economiques et Commerciales)</li></ul>	
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 				

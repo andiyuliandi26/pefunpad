@@ -13,9 +13,9 @@
 			bottom: 0;
 			content: '';
 			opacity: 1;
-			background-image: url("/images/openmic/background.jpg");
+			background-image: url("/images/openmic/background-portrait.jpg");
 			background-repeat: repeat-y;
-			background-size: 100%;
+			background-size: 100% 100%;
 		}
 	}
 
@@ -31,7 +31,7 @@
 			/*background-position: center;*/
 			background-image: url("/images/openmic/background-portrait.jpg");
 			background-repeat: repeat-y;
-			background-size: 100%;
+			background-size: 100% 100%;
 		}
 	}
 /*
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-5 col-mb-10">
+			<div class="col-md-5 col-mb-10 mb-5">
 				<div class="video-container">
 					<div class="iframe-container">
 						<?= generate_yt_iframe('i3OIXOOkeTw'); ?>
@@ -116,7 +116,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-5 col-mb-10">
+			<div class="col-md-5 col-mb-10 mb-5">
 				<div class="video-container">
 					<div class="iframe-container">
 						<?= generate_yt_iframe('AHCcuAO7h68'); ?>
