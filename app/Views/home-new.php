@@ -118,18 +118,58 @@
 
 	
 </style>
+<style>
+	.image-overlay {
+	  transition: .5s ease;
+	  opacity: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  text-align: center;
+	}
 
+	.image-link:hover .img-fluid {
+	  opacity: 0.5;
+	}
+
+	.image-link:hover .image-overlay {
+	  opacity: 1;
+	}
+
+	.image-text-overlay {
+	  /*background-color: #4CAF50;*/
+	  color: white;
+	  font-size: 16px;
+	  padding: 16px 32px;
+	}
+</style>
 <div class="bg-homepage">
 		<div class="container-page">
 
 			<div class="row no-gutters justify-content-center mt-lg-1 mt-md-4 mt-xs-3 mt-2 mb-lg-5 main-event mb-5 space-between-section top-section" data-aos="fade-down">
 				<div class="col-md-8 col-sm-6 text-center">
 					<h3 class="text-dark page-title"> <?= $event->eventdatetitle; ?> </h3>
-					<div id="countdown" class="countdownHolder"></div>
+						<?php if(date('Y-m-d H:i') > $event->tanggaleventstart): ?>
+						<?php else: ?>
+							<div id="countdown" class="countdownHolder"></div>
+						<?php endif; ?>
 				</div>
 				<div class="col-md-7 col-lg-8 col-sm-8 col-xs-6 ftco-animate text-center mb-2">
 					<div class="video-container">
-						<img class="img-fluid" src="/images/mainevent/<?= $event->posterurl; ?>" />
+
+						<?php if(date('Y-m-d H:i') > $event->tanggaleventstart): ?>
+							<a class="image-link" href="/mainevent">
+								<img class="img-fluid" src="/images/mainevent/mainevent-poster-livenow.jpg" alt="Live Now" />
+									<div class="image-overlay">
+									<div class="image-text-overlay font-pef bg-dark">Klik disini</div>
+									</div>
+							</a>
+						<?php else: ?>
+								<img class="img-fluid" src="/images/mainevent/<?= $event->posterurl; ?>" />
+						<?php endif; ?>
+
 					</div>
 				</div>
 			</div>
