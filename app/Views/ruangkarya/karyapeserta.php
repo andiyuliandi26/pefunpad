@@ -12,7 +12,7 @@
 			bottom: 0;
 			content: '';
 			opacity: 1;
-			background-image: url("/images/ruangkarya/background.jpg");
+			background-image: url("/images/ruangkarya/background-portrait.jpg");
 			background-repeat: repeat-y;
 			background-size: 100%;
 		}
@@ -43,7 +43,6 @@
 		max-height: 200px;
 	}
 </style>
-<div class="hero-wrap">
 	<div class="bg-ruangkarya">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center  pt-md-5">
@@ -218,7 +217,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 <script>
 	function addComment(karyapesertaID) {
         var komentar = $('#Comment-'+karyapesertaID).val();

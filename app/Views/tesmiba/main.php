@@ -29,7 +29,7 @@
 			opacity: 1;
 			background-image: url("/images/tesmiba/background.jpg");
 			background-repeat: repeat-y;
-			background-size: 100%;
+			background-size: 100% auto;
 		}
 	}
 
@@ -43,7 +43,7 @@
 			content: '';
 			opacity: 1;
 			/*background-position: center;*/
-			background-image: url("/images/tesmiba/background-portrait.jpg");
+			background-image: url("/images/tesmiba/background.jpg");
 			background-repeat: repeat-y;
 			background-size: 100%;
 		}
