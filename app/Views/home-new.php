@@ -407,6 +407,11 @@
 		<div class="modal-content bg-transparent border-0">
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-md-12 col-mb-8">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position:absolute; top:10px; right:50px; z-index:100090; font-size:45px;">
+					<span aria-hidden="true">&times;</span>
+				</button>	
+				</div>
+				<div class="col-lg-12 col-md-12 col-mb-8">
 					<div class="embed-responsive embed-responsive-16by9">
 						<video width="320" height="240" class="embed-responsive-item" autoplay loop autobuffer muted playsinline>
 							<source src="/videos/welcome_screen.mp4" type="video/mp4">
