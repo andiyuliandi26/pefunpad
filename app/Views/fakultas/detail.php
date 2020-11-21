@@ -51,11 +51,19 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-8 my-md-3 mb-sm-4 mt-sm-3">
-				<div class="video-container">
-					<div class="iframe-container">
-					<iframe class="responsive-iframe"  src="<?= $fakultas->videourl; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-				</div>
+				
+					<?php if($fakultas->videourl == ""): ?>
+						<img class="img-fluid" src="/images/commingsoon_poster.png"/>
+					<?php else: ?>
+						<div class="video-container">
+							<div class="iframe-container">
+								<?= generate_yt_iframe($fakultas->videourl); ?>
+							</div>
+						
+						</div>
+
+					<?php endif; ?>
+
 			</div>
 			<div class="col-md-12 col-sm-11">
 				<div class="text-container">

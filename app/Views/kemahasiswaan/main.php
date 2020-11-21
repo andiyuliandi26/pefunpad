@@ -43,9 +43,9 @@
 				<h2 class="h1 text-center page-title text-dark">Lembaga Kemahasiswaan</h2>				
 			</div>
 			<div class="col-md-10 col-mb-12 text-center mb-4">
-				<div class="card">
+				<div class="card bg-transparent border-0">
 					<div class="card-body">									
-						<h4 class="font-pef">Paguyuban</h4>
+						<h2 class="font-pef">Paguyuban</h2>
 						<div class="row mt-2 justify-content-center">
 							<div class="col-md-8">
 								<div class="video-container mt-3 mb-3">
@@ -72,9 +72,9 @@
 			</div>
 
 			<div class="col-md-10 col-mb-12 text-center">
-				<div class="card">
+				<div class="card bg-transparent border-0">
 					<div class="card-body">									
-						<h4 class="font-pef">UKM & BSO</h4>
+						<h2 class="font-pef">UKM & BSO</h2>
 						<div class="row mt-2 justify-content-center">
 							<div class="col-md-8">
 								<div class="video-container mt-3 mb-3">
