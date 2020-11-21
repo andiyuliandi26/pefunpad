@@ -56,14 +56,14 @@
 							</div>
 						</div>
 						
-						<div class="row text-left font-weight-bold">
-							<div class="col-md-4 col-mb-4 ">
+						<div class="row text-left font-weight-bold justify-content-center">
+							<div class="col-md-4 col-mb-6 ">
 								<ul><li>HIKMI</li><li>PAMASAGI </li><li>PRIME</li><li>KOMPAS </li><li>IKMM<br></li><li>GAMABAN<br></li><li>KMC<br></li><li>GAMAKU<br></li><li>KORAN<br></li><li>KMKB<br></li><li>PKMT</li></ul>
 							</div>
-							<div class="col-md-4 col-mb-4">
+							<div class="col-md-4 col-mb-6">
 								<ul><li>WARTA<br></li><li>IKMAPA<br></li><li>KEMASS<br></li><li>KOASI<br></li><li>KMP<br></li><li>PADJADJAVA<br></li><li>MUSI<br></li><li>KAKABAN<br></li><li>RANUP<br></li><li>AMPERA<br></li><li>HIMAMIRA</li></ul>
 							</div>
-							<div class="col-md-4 col-mb-4">
+							<div class="col-md-4 col-mb-6">
 								<ul><li>GAWAREBON<br></li><li>PAMATEN<br></li><li>HIMAJA<br></li><li>PUB<br></li><li>KMN<br></li><li>KWACI<br></li><li>BANGBARA<br></li><li>CILACAP<br></li><li>COMMEL<br></li><li>KMBU<br></li><li>SOMBA<ul></ul></li></ul>
 							</div>
 						</div>
@@ -101,16 +101,16 @@
 							<div class="col-md-12 col-mb-12 text-center">
 								<h4 class="font-pef">UKM</h4>
 							</div>
-							<div class="col-md-6 col-mb-6 ">
+							<div class="col-md-6 col-mb-12 ">
 								<ul><li>Pramuka Unpad<br></li><li>Unit SAR Unpad<br></li><li>Spektrum Unpad<br></li><li>Unit Bridge Unpad<br></li><li>KSR PMI Unit Unpad<br></li><li>PMPA Palawa Unpad<br></li><li>Perisai Diri (PDUP)<br></li><li>Shorinji Kempo Unpad<br></li><li>Unit KarateUnpad (UKU)<br></li><li>Resimen Mahasiswa Unpad</li></ul>
 							</div>
-							<div class="col-md-6 col-mb-6">
+							<div class="col-md-6 col-mb-12">
 								<ul><li>Kiryokukai Aikido Unpad<br></li><li>Unit Hoki Unpad (UHU)<br></li><li>Unit Renang Unpad (URU)<br></li><li>Merpati Putih Unpad (MPUP)<br></li><li>Unit Bola Voli Unpad (UBVU)<br></li><li>Unit Taekwondo Unpad (UTKD)</li><li>UKM Tenis Meja Unpad (UTMU)<br></li><li>Unit Sepak Bola Unpad (USBU)<br></li><li>Lingkungan Seni Sunda (LISES)</li></ul>			
 							</div>
-							<div class="col-md-6 col-mb-6 ">
+							<div class="col-md-6 col-mb-12 ">
 								<ul><li>Unit Bola Basket Unpad (UBBU)<br></li><li>Unit Bulu Tangkis Unpad (UBTU)<br></li><li>Unit Flag Football Unpad (UFFU)<br></li><li>Unit Tarung Derajat Unpad (UTDU)<br></li><li>Unit Catur Mahasiswa Unpad (UCMU)<br></li><li>Unit Baseball Softball Unpad (UBSU)</li></ul>
 							</div>
-							<div class="col-md-6 col-mb-6">
+							<div class="col-md-6 col-mb-12">
 								<ul><li>Padjadjaran Ensemble Community (PEC)<br></li><li>Unit Pecinta Budaya Minangkabau (UPBM)<br></li><li>Korps Protokoler Mahasiswa Unpad (KPM)<br></li><li>Sadaluhung Padjadjaran Drum Corps (SPDC)<br></li><li>Paduan Suara Mahasiswa Unpad (PSM Unpad)<br></li><li>English Speaking Union Unpad (ESU Unpad)</li></ul>	
 							</div>
 							<div class="col-md-12 col-mb-12">

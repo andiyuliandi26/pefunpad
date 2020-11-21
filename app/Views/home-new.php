@@ -414,17 +414,22 @@
 	});
 
 	function showlogo() {
-		//if (!$('.logodetail').hasClass('logo-show')) {
+		if (!$('.logodetail').hasClass('logo-shows')) {
 			//$('.logodetail').removeClass('logo-hide');
 			//$('.logodetail').addClass('logo-show');
 			$('.logodetail').addClass('logo-shows');
 			$('.logodetail2').addClass('logo-shows');
 			$('.logodetail3').addClass('logo-shows');
 			$('.logodetail4').addClass('logo-shows');
-		//} else {
-		//	//$('.logodetail').addClass('logo-hide');
-		//	$('.logodetail').removeClass('logo-show');
-		//}
+		} else {
+			//$('.logodetail').addClass('logo-hide');
+
+
+			$('.logodetail').removeClass('logo-shows');
+			$('.logodetail2').removeClass('logo-shows');
+			$('.logodetail3').removeClass('logo-shows');
+			$('.logodetail4').removeClass('logo-shows');
+		}
 
 		//if (!$('.logodetail2').hasClass('logo-show2')) {
 			//$('.logodetail').removeClass('logo-hide');
