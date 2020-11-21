@@ -129,7 +129,7 @@
                 </div>
                 <div class="col-md-12 my-3">                    
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Asal Sekolah" id="AsalSekolah">
+                        <input type="text" class="form-control" placeholder="Institusi" id="AsalSekolah">
                     </div>
                 </div>
             </div>

@@ -50,9 +50,9 @@ class Mainevent extends BaseAPIController
 			'asalsekolah'  => [
                     'rules' => 'required|alpha_numeric_space|min_length[1]',
                     'errors' => [
-                        'required' => 'Asal Sekolah Wajib diisi',
-                        'alpha_numeric_space' => 'Asal Sekolah tibak boleh terdapat special karakter',
-                        'min_length[1]' => 'Asal Sekolah tidak boleh beberapa huruf'
+                        'required' => 'Institusi Wajib diisi',
+                        'alpha_numeric_space' => 'Institusi tibak boleh terdapat special karakter',
+                        'min_length[2]' => 'Institusi tidak boleh beberapa huruf'
                     ] 
                 ],
 		];
