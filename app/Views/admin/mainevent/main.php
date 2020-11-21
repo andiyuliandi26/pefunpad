@@ -27,6 +27,10 @@
                     <label>Tanggal Selesai</label>
                     <?php echo form_input('tanggaleventend', $data->tanggaleventend, ['class'=>'form-control datepicker']); ?>
                  </div>
+                <div class="form-group col-md-3">
+                    <label>Live Streaming Url</label>
+                    <?php echo form_input('livestreamingurl', $data->livestreamingurl, ['class'=>'form-control']); ?>
+                 </div>
                 <div class="form-group col-md-12">
                     <label>Poster</label>
                     <div class="row">
