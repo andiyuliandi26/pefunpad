@@ -15,14 +15,14 @@
             <thead>
                 <tr class="text-center">
                     <th width="5%"></th>
-                    <th width="10%">Kategori</th>
-                    <th width="10%">Asal Sekolah</th>
+                    <th width="15%">Kategori</th>
+                    <th width="15%">Asal Sekolah</th>
                     <th width="10%">Nama Tim</th>
-                    <th width="10%">Nama Peserta</th>
+                    <th width="15%">Nama Peserta</th>
                     <th width="5%">Judul</th>
                     <th width="5%">Jenis Karya</th>
                     <th width="5%">Status Karya</th>
-                    <th width="20%">Url Karya</th>
+                    <th width="10%">Url Video</th>
                     <th width="5%">Active</th>
                 </tr>
             </thead>
@@ -43,7 +43,7 @@
                         <td class="align-middle"><?php echo $items->judulkarya; ?></td>
                         <td class="align-middle"><?php echo $items->jeniskarya; ?></td>
                         <td class="align-middle"><?php echo $items->statuspeserta; ?></td>
-                        <td class="align-middle"><?php echo $items->urlkarya; ?></td>
+                        <td class="align-middle"><?php echo $items->videourl; ?></td>
                         <td class="align-middle text-center">
                             <div class="custom-control custom-checkbox">                   
                                 <?php echo form_checkbox('isactive', 1, $items->isactive, ['class'=>'custom-control-input', 'id' => 'customSwitch', 'disabled' => 'disabled']); ?>

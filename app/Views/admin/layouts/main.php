@@ -3,7 +3,8 @@
   <head>
     <title>PEF x OHU Admin</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--<meta name="viewport" content="width=576, initial-scale=1.0">-->
     
     <link href="<?php echo base_url(); ?>/css/sb-admin-2/sb-admin-2.css" rel="stylesheet" />
 

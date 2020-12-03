@@ -3,7 +3,38 @@
     echo $this->section('content');
 ?>
 <style>
-	.bg-mainevent {
+    @media (orientation: landscape) {
+		.bg-mainevent {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/mainevent/background.jpg");
+			background-repeat: repeat-y;
+			background-size: cover;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-mainevent {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/mainevent/background.jpg");
+			background-repeat: repeat-y;
+			background-size: cover;
+		}
+	}
+
+/*	.bg-mainevent {
 		position: absolute;
         top: 0;
         left: 0;
@@ -16,48 +47,69 @@
         background-size: 100% 100%;
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
 	}
-
-    .bg-fakultas {
-		position: relative;
+*/
+	.bg-bukutamu {
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         content: '';
-        opacity: .97;
-        background-image: url("/images/fakultas/background.jpg");
+        opacity: 1;
+        background-image: url("/images/mainevent/background_bukutamu.jpg");
         background-repeat: repeat-y;
-        background-size:  100% 100%;
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+        background-size: 100%;
 	}
 </style>
-<div class="container-bg">
-	<img class="image-bg" src="/images/mainevent/background.png" />
-	<img class="image-bg d-none d-sm-block d-md-none" src="/images/kemahasiswaan/background.jpg" />
-	<div class="content-page">
-        <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 main-event">
-				<div class="col-md-8 text-center">
-					<h2 class="h1 text-center page-title mt-3" data-aos="fade-down">Main Event</h2>
-				</div>
-				<div class="col-xl-8 col-md-10 col-sm-12">
-                    <div class="container-bg">
-						<img class="image-bg" src="/images/commingsoon_poster.png" />
-					</div>
-				</div>
+<div class="bg-mainevent">
+    <div class="container-page">
+        <div class="row no-gutters justify-content-center mt-md-3 mt-sm-5 mb-5 pb-5 main-event">
+			<div class="col-md-8 text-center">
+				<h2 class="h1 text-center page-title mt-md-0 mt-lg-0 mt-3" data-aos="fade-down">Main Event</h2>
 			</div>
+			<div class="col-xl-8 col-md-10 col-sm-12">
+                <?php if($event->livestreamingurl != ""): ?>
+                    <div class="video-container">
+						<div class="iframe-container">
+							<?= generate_yt_iframe($event->livestreamingurl); ?>
+						</div>
+					</div>
+                <?php else: ?>
+                 <div class="container-bg">
+					<img class="image-bg" src="/images/commingsoon_poster.png" />
+				</div>
+                <?php endif; ?>
+               
+			</div>
+		</div>
     </div>
 </div>
 
 <div class="modal fade" id="BukuTamuModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content border-0">
-      <div class="modal-header bg-success border-0">
-        <h5 class="modal-title text-white" id="staticBackdropLabel">Buku tamu</h5>
+    <div class="modal-content border-0 bg-bukutamu">
+      <div class="modal-header border-0 text-center">
+          <div class="row justify-content-center text-center">
+              <div class="col-md-2 col-sm-2 col-mb-2">
+                <a href="<?= base_url(); ?>" class="mr-4 card-link">
+                  <img class="img-fluid" src="<?= base_url() ?>/images/logopef.png" height="60">
+                </a>
+              </div>
+              <div class="col-md-12">
+                <h5 class="text-white" id="staticBackdropLabel">Buku tamu</h5>
+              </div>
+              <div class="col-md-11">
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert" id="showAlert" style="display:none;">
+                      <div id="alert-content" class="text-left"></div>
+                    </div>
+              </div>
+          </div>
+        
         <!--<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>-->
       </div>
-      <div class="modal-body bg-success subscribe-form">
+      <div class="modal-body subscribe-form">
             <div class="row no-gutters">
                 <div class="col-md-12 my-3">
                     <div class="form-group text-dark">
@@ -77,21 +129,23 @@
                 </div>
                 <div class="col-md-12 my-3">                    
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Asal Sekolah" id="AsalSekolah">
+                        <input type="text" class="form-control" placeholder="Institusi" id="AsalSekolah">
                     </div>
                 </div>
             </div>
       </div>
-      <div class="modal-footer bg-success">
-        <button type="button" class="btn btn-dark" onclick="submitBukuTamu()">Submit</button>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" onclick="submitBukuTamu()">Submit</button>
       </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function () {
-		$('#BukuTamuModal').modal('show');
+    $(document).ready(function () {
+        if ('<?= $inputbukutamu['value']; ?>' != 'true') {            
+		    $('#BukuTamuModal').modal('show');
+        }
     });
 
     function submitBukuTamu() {
@@ -101,23 +155,31 @@
         var nohp = $('#NoHP').val();
         var asalsekolah = $('#AsalSekolah').val();
 
-        if (nama == "" || email == "" || nohp == "" || asalsekolah == "") {
-            alert("Pengisian buku tamu belum lengkap.");
-        } else {
-            $.ajax({
-                url: '<?php echo base_url()."/api/mainevent/create";?>',
-                type: 'POST',
-                dataType: "json",
-                data: {eventid: eventid, namatamu: nama, email: email, nohp:nohp, asalsekolah:asalsekolah},
-                success: function (data) {
-                    if (!data.error) {
-                        $('#BukuTamuModal').modal('hide');
-                    } else {
-                        alert(data.data);
+        $.ajax({
+            url: '<?php echo base_url()."/api/mainevent/create";?>',
+            type: 'POST',
+            dataType: "json",
+            data: {eventid: eventid, namatamu: nama, email: email, nohp:nohp, asalsekolah:asalsekolah},
+            success: function (data) {
+                if (!data.error) {
+                    $('#BukuTamuModal').modal('hide');
+                } else {
+                    if (data.status == 404) {
+                        var alertMessage = "";
+                        var errorMessage = Object.values(data.response_message);
+                        for (var i = 0; i < errorMessage.length; i++) {
+                            alertMessage += '<span>' + errorMessage[i] + '</span></br>';
+                        }
+                        $('#alert-content').empty().append(alertMessage);
+                        $('#showAlert').show();
+                        console.log(errorMessage);
                     }
+
+                    console.log(data);
+                    //alert(data.data);
                 }
+            }
 		});
-        }
     }
 </script>
 <?php echo $this->endSection('content'); ?>

@@ -50,7 +50,7 @@
           <li class="nav-item"><a href="/openmic" class="nav-link">Spektrum Alumni</a></li>
             <?php
             if(logged_in()){
-               // echo "<li class='nav-item'><a href='/logout' class='nav-link'>Logout</a></li>";
+                echo "<li class='nav-item'><a href='/logout' class='nav-link fa fas fa-power-off'></a></li>";
             }
             ?>
         </ul>

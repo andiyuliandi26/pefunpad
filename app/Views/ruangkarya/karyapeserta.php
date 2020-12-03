@@ -3,18 +3,35 @@
     echo $this->section('content');
 ?>
 <style>
-	.bg-ruangkarya {
-		position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        opacity: .97;
-        background-image: url("/images/ruangkarya/background.jpg");
-        background-repeat: repeat-y;
-        background-size: 100% auto;
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+	@media (orientation: landscape) {
+		.bg-ruangkarya {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			background-image: url("/images/ruangkarya/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.bg-ruangkarya {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 1;
+			/*background-position: center;*/
+			background-image: url("/images/ruangkarya/background-portrait.jpg");
+			background-repeat: repeat-y;
+			background-size: 100%;
+		}
 	}
 
 	.ruangkarya-link:hover {
@@ -26,20 +43,28 @@
 		max-height: 200px;
 	}
 </style>
-<div class="hero-wrap">
 	<div class="bg-ruangkarya">
 		<div class="container-page">
 			<div class="row no-gutters justify-content-center  pt-md-5">
 				<div class="col-md-12 ftco-animate text-center">
-					<h1 class="text-center font-pef text-dark mt-3">Karya Peserta</h1>
+					<h2 class="text-center font-pef text-dark mt-3"><a href="/ruangkarya" class="card-link float-left"><i class="fa fas fa-arrow-left text-dark h2"></i></a> Karya Peserta</h2>
 					<h2 class=" font-pef">Kategori <?php echo $karyapeserta[0]->kategori; ?></h2>
 					<h3 class="text-center text-dark mt-3 font-pef">Juara</h3>
+					<?php
+							if($karyapeserta[0]->imagepemenang != NULL):;?>		
+								<div class="row justify-content-center">
+									<div class="col-md-4">
+										<img class="img-fluid" src="<?= base_url(); ?>/images/ruangkarya/<?= $karyapeserta[0]->imagepemenang; ?>" alt="Foto Pemenang" />
+									</div>
+								</div>
+						<?php endif; ?>
 					<div class="row justify-content-center">
+						
 						<?php
 							$index = 0;
 							foreach($karyapeserta as $items):?>
 							<?php if(strstr($items->statuspeserta, "Juara")): ?>
-								<div class="col-md-3 my-4">
+								<div class="col-md-3 col-mb-12 my-4">
 									<div class="text-container px-3">
 										<div class="card-body text-left">	
 											<h3 class="text-center font-pef"><?= $items->statuspeserta; ?></h3>
@@ -192,7 +217,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 <script>
 	function addComment(karyapesertaID) {
         var komentar = $('#Comment-'+karyapesertaID).val();

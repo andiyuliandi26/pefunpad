@@ -52,6 +52,7 @@ class BaseController extends Controller
 	protected $userEntity;
 	protected $auth_groups;
 	protected $peserta_event;
+	protected $visitor;
 	#endregion
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -96,6 +97,7 @@ class BaseController extends Controller
 		$this->virtual_markipad =  new \App\Models\MarkipadModel();
 		$this->webinar =  new \App\Models\WebinarModel();
 		$this->webinar_peserta =  new \App\Models\WebinarPesertaModel();
+		$this->visitor =  new \App\Models\VisitorModel();
 		$this->users = model(UserModel::class);
 		//$this->userEntity = model(User::class);
 		$this->userEntity = model(User::class);

@@ -191,6 +191,31 @@
 		}
 	}
 
+	.dot {
+	  height: 15px;
+	  width: 15px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  margin-right: 5px;
+	}
+
+	.container-video {
+	  border-radius: 20px;
+	  background-color: #fff;
+	}
+
+	.top {
+	  padding: 7px 0px 7px 10px;
+	  background: #000000;
+	  border-top-left-radius: 20px;
+	  border-top-right-radius: 20px;
+	  text-align:left;
+	}
+
+	.content-video {
+	  padding: 20px;
+	}
 </style>
 
 <div class="container-bg">
@@ -202,7 +227,17 @@
 				<div id="countdown" class="countdownHolder"></div>
 			</div>
 			<div class="col-md-7 col-sm-9 col-xs-6 px-5">
-				<img class="img-fluid" src="/images/homepage/mainevent.png" />
+				<div class="container-video">
+					  <div class="top">
+						<span class="dot bg-danger"></span>
+						<span class="dot bg-warning"></span>
+						<span class="dot bg-success"></span>
+					  </div>
+
+					  <div class="content-video">
+						<img class="img-fluid" src="/images/homepage/mainevent.png" />
+					  </div>
+				</div>
 				<!--<div class="container-bg">
 					
 				</div>-->
@@ -292,7 +327,7 @@
 <div class="container-bg d-none d-md-block ">
 	<img class="image-bg" src="/images/homepage/bg/polos_02.png" />
 	<div class="content-page">
-		<div  class="row no-gutters mt-2 justify-content-center text-center">
+		<div  class="row no-gutters mt-5 justify-content-center text-center">
 				<div class="col-md-4 pt-3">
 					<div class="row mb-2 logodetail">
 						<div class="col-md-3">
@@ -347,7 +382,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row no-gutters mt-2 pt-2 justify-content-center text-center" data-aos="fade-in">
+			<div class="row no-gutters mt-5 pt-5 justify-content-center text-center" data-aos="fade-in">
 				<div class="col-sm-8">
 					<!--<img class="img-fluid" src="/images/pef-ohu.png" />-->
 					<h1 class="font-pef text-danger mb-1 display-4">PEF x OHU 2020</h1>

@@ -29,6 +29,7 @@ class Mainevent extends AdminBaseController
 			    'eventdatetitle' => $this->request->getPost('eventdatetitle'),
 			    'tanggaleventstart'  => $this->request->getPost('tanggaleventstart'),
 			    'tanggaleventend'  => $this->request->getPost('tanggaleventend'),
+			    'livestreamingurl'  => $this->request->getPost('livestreamingurl'),
 			    'posterurl'  => $imageName,
 			    'isactive'  => $this->request->getPost('isactive'),
 			]);

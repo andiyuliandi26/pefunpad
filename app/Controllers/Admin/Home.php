@@ -6,6 +6,8 @@ class Home extends AdminBaseController
 {
 	public function index()
 	{
-		return view("/admin/home");
+		session()->set('redirect_url', '/admin');
+		$data['visitor'] = ['totalvisitor' => $this->visitor->countvisitor(), 'totalvisitortoday' => $this->visitor->countvisitortoday()];
+		return view("/admin/home", $data);
 	}
 }
