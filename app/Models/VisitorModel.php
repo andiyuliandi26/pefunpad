@@ -29,7 +29,7 @@ class VisitorModel extends BaseModel{
 
 		$data = [
 			'tanggal' => date('Y-m-d H:i:s'),
-			'ipaddress' => $_SERVER['REMOTE_ADDR'],
+			'ipaddress' => getUserIP(),
 			'useragent' => $currentAgent,
 			'platform' => $agent->getPlatform()	
 		];
